@@ -1,0 +1,39 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+mainNotes.bib
+
+# PDF output (rebuild from source)
+paper/*.pdf
+paper/figures/*.png
+
+# Editor files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Submission archive
+paper/submission/
+*.tar.gz
+
+# AI assistant metadata
+.claude/
+.claude-max/
+CLAUDE.md
+.claude.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
