@@ -13,9 +13,13 @@
 *.synctex(busy)
 mainNotes.bib
 
-# PDF output (rebuild from source)
+# Compiled paper PDFs (rebuild from source; official arXiv PDFs live in versions/)
 paper/*.pdf
+paper/jsp/*.pdf
 paper/figures/*.png
+
+# Lean build cache (multi-GB; restore with `lake exe cache get`)
+formalization/.lake/
 
 # Editor files
 *.swp
@@ -23,7 +27,7 @@ paper/figures/*.png
 *~
 .DS_Store
 
-# Submission archive
+# Submission archives
 paper/submission/
 *.tar.gz
 

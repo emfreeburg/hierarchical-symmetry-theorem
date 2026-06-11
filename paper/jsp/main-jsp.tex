@@ -3,55 +3,51 @@
 % Hierarchical symmetry selects log-Poisson cascades:
 % classification, uniqueness, and stability
 %
-% E. M. Freeburg --- self-contained LaTeX source.
-% Builds with pdflatex (run twice).
+% E. M. Freeburg --- Journal of Statistical Physics format
+% (Springer Nature sn-jnl class, MathPhys numbered reference style;
+%  same conventions as the v1 JSP submission JOSS-S-26-00211).
+% Builds with pdflatex (run twice); requires sn-jnl.cls alongside.
 % ======================================================================
-\documentclass[12pt]{amsart}
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}
 
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
 \usepackage{dsfont}
-\usepackage[colorlinks=false,pdfborder={0 0 0}]{hyperref}
 \usepackage{booktabs}
 
-% ── Theorem environments ──
+% -- Theorem environments (Springer styles) --
+\theoremstyle{thmstyleone}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 
-\theoremstyle{definition}
-\newtheorem*{axiom}{Axiom}
-
-\theoremstyle{remark}
+\theoremstyle{thmstyletwo}
 \newtheorem*{remark}{Remark}
 
-% ── Operators ──
+% Axiom (unnumbered, definition-like)
+\theoremstyle{thmstylethree}
+\newtheorem*{axiom}{Axiom}
+
+% -- Operators --
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator*{\esssup}{ess\,sup}
 
-% Resolve tight paragraphs with slightly looser spacing instead of
-% overfull lines.
 \setlength{\emergencystretch}{3em}
-
-\subjclass[2020]{60G57, 60E10, 60G51, 60F10, 28A80, 76F55}
-\keywords{Multiplicative cascades, log-Poisson distribution,
-hierarchical symmetry, multifractal spectrum, Hausdorff moment problem,
-multifractal random measures, large deviations}
 
 \begin{document}
 
 \title[Hierarchical symmetry selects log-Poisson cascades]%
-{Hierarchical symmetry selects log-Poisson cascades: \\
+{Hierarchical symmetry selects log-Poisson cascades:
 classification, uniqueness, and stability}
 
-\author{E.~M.~Freeburg}
-\address{Independent Researcher}
-\date{}
+\author*[1]{\fnm{E. M.} \sur{Freeburg}}\email{hqops@icloud.com}
 
-\begin{abstract}
-Within i.i.d.\ multiplicative cascades, a single axiom---the
+\affil*[1]{\orgname{Independent Researcher}}
+
+\abstract{Within i.i.d.\ multiplicative cascades, a single axiom---the
 hierarchical symmetry, a linear contraction on incremental scaling
 exponents---is shown to be necessary and sufficient for the cascade
 multiplier to be log-Poisson.  We prove: (1)~a characterization
@@ -80,8 +76,13 @@ symmetry selects exactly the Barral--Mandelbrot compound Poisson
 cascade, with scale-ratio-free stability constants.  The proofs
 reduce to second-moment identities on $[0,1]$ via the change of
 variables $u = e^{kx}$, boundedness of the multiplier
-($\esssup W = r^\gamma$), and multiplicative couplings.
-\end{abstract}
+($\esssup W = r^\gamma$), and multiplicative couplings.}
+
+\keywords{Multiplicative cascades, Log-Poisson distribution,
+Hierarchical symmetry, Multifractal spectrum, Hausdorff moment
+problem, Multifractal random measures, Large deviations}
+
+\pacs[MSC Classification]{60G57, 60E10, 60G51, 60F10, 28A80, 76F55}
 
 \maketitle
 
@@ -1845,115 +1846,125 @@ open.
   magnitude statistics rather than high-order structure functions.
 \end{enumerate}
 
-% ══════════════════════════════════════════════════════════════════════
+\backmatter
+
+\bmhead{Funding}
+The author received no funding for this work.
+
+\bmhead{Conflict of interest}
+The author declares no competing interests.
+
+\bmhead{Data availability}
+Data sharing is not applicable to this article as no datasets were
+generated or analyzed during the current study.
+
+% ======================================================================
 \begin{thebibliography}{99}
-% ══════════════════════════════════════════════════════════════════════
+% ======================================================================
 
 \bibitem{Akh65}
-N.\,I.\ Akhiezer,
-\textit{The Classical Moment Problem and Some Related Questions in
-Analysis},
-Oliver \& Boyd, Edinburgh, 1965.
+Akhiezer, N.I.:
+The Classical Moment Problem and Some Related Questions in
+Analysis.
+Oliver \& Boyd, Edinburgh (1965)
 
 \bibitem{BM03}
-E.\ Bacry and J.\,F.\ Muzy,
-Log-infinitely divisible multifractal processes,
-\textit{Comm.\ Math.\ Phys.}\ \textbf{236} (2003), 449--475.
+Bacry, E., Muzy, J.F.:
+Log-infinitely divisible multifractal processes.
+Commun.\ Math.\ Phys.\ \textbf{236}, 449--475 (2003)
 
 \bibitem{BHJ92}
-A.\,D.\ Barbour, L.\ Holst, and S.\ Janson,
-\textit{Poisson Approximation},
-Oxford University Press, Oxford, 1992.
+Barbour, A.D., Holst, L., Janson, S.:
+Poisson Approximation.
+Oxford University Press, Oxford (1992)
 
 \bibitem{BM02}
-J.\ Barral and B.\,B.\ Mandelbrot,
-Multiplicative products of cylindrical pulses,
-\textit{Probab.\ Theory Related Fields}\ \textbf{124} (2002),
-409--430.
+Barral, J., Mandelbrot, B.B.:
+Multiplicative products of cylindrical pulses.
+Probab.\ Theory Related Fields \textbf{124}, 409--430 (2002)
 
 \bibitem{DMA01}
-J.\ Delour, J.\,F.\ Muzy, and A.\ Arneodo,
+Delour, J., Muzy, J.F., Arneodo, A.:
 Intermittency of 1D velocity spatial profiles in turbulence: a
-magnitude cumulant analysis,
-\textit{Eur.\ Phys.\ J.\ B}\ \textbf{23} (2001), 243--248.
+magnitude cumulant analysis.
+Eur.\ Phys.\ J.\ B \textbf{23}, 243--248 (2001)
 
 \bibitem{DZ98}
-A.\ Dembo and O.\ Zeitouni,
-\textit{Large Deviations Techniques and Applications},
-2nd ed., Springer, New York, 1998.
+Dembo, A., Zeitouni, O.:
+Large Deviations Techniques and Applications, 2nd edn.
+Springer, New York (1998)
 
 \bibitem{Dub94}
-B.\ Dubrulle,
+Dubrulle, B.:
 Intermittency in fully developed turbulence: log-Poisson statistics
-and generalized scale covariance,
-\textit{Phys.\ Rev.\ Lett.}\ \textbf{73} (1994), 959--962.
+and generalized scale covariance.
+Phys.\ Rev.\ Lett.\ \textbf{73}, 959--962 (1994)
 
 \bibitem{DG96}
-B.\ Dubrulle and F.\ Graner,
+Dubrulle, B., Graner, F.:
 Possible statistics of scale invariant systems and the observation of
-intermittency in turbulence,
-\textit{J.\ Phys.\ II France}\ \textbf{6} (1996), 817--824.
+intermittency in turbulence.
+J.\ Phys.\ II France \textbf{6}, 817--824 (1996)
 
 \bibitem{Hey63}
-C.\,C.\ Heyde,
-On a property of the lognormal distribution,
-\textit{J.\ Roy.\ Statist.\ Soc.\ Ser.\ B}\ \textbf{25} (1963),
-392--393.
+Heyde, C.C.:
+On a property of the lognormal distribution.
+J.\ Roy.\ Statist.\ Soc.\ Ser.\ B \textbf{25}, 392--393 (1963)
 
 \bibitem{KP76}
-J.-P.\ Kahane and J.\ Peyri\`ere,
-Sur certaines martingales de Benoit Mandelbrot,
-\textit{Adv.\ Math.}\ \textbf{22} (1976), 131--145.
+Kahane, J.-P., Peyri\`ere, J.:
+Sur certaines martingales de Benoit Mandelbrot.
+Adv.\ Math.\ \textbf{22}, 131--145 (1976)
 
 \bibitem{Kal02}
-O.\ Kallenberg,
-\textit{Foundations of Modern Probability},
-2nd ed., Springer, New York, 2002.
+Kallenberg, O.:
+Foundations of Modern Probability, 2nd edn.
+Springer, New York (2002)
 
 \bibitem{Kin93}
-J.\,F.\,C.\ Kingman,
-\textit{Poisson Processes},
-Oxford University Press, Oxford, 1993.
+Kingman, J.F.C.:
+Poisson Processes.
+Oxford University Press, Oxford (1993)
 
 \bibitem{K62}
-A.\,N.\ Kolmogorov,
+Kolmogorov, A.N.:
 A refinement of previous hypotheses concerning the local structure of
-turbulence in a viscous incompressible fluid at high Reynolds number,
-\textit{J.\ Fluid Mech.}\ \textbf{13} (1962), 82--85.
+turbulence in a viscous incompressible fluid at high Reynolds number.
+J.\ Fluid Mech.\ \textbf{13}, 82--85 (1962)
 
 \bibitem{Man74}
-B.\,B.\ Mandelbrot,
+Mandelbrot, B.B.:
 Intermittent turbulence in self-similar cascades: divergence of high
-moments and dimension of the carrier,
-\textit{J.\ Fluid Mech.}\ \textbf{62} (1974), 331--358.
+moments and dimension of the carrier.
+J.\ Fluid Mech.\ \textbf{62}, 331--358 (1974)
 
 \bibitem{MB02}
-J.\,F.\ Muzy and E.\ Bacry,
+Muzy, J.F., Bacry, E.:
 Multifractal stationary random measures and multifractal random
-walks with log infinitely divisible scaling laws,
-\textit{Phys.\ Rev.\ E}\ \textbf{66} (2002), 056121.
+walks with log infinitely divisible scaling laws.
+Phys.\ Rev.\ E \textbf{66}, 056121 (2002)
 
 \bibitem{SL94}
-Z.-S.\ She and E.\ L\'ev\^eque,
-Universal scaling laws in fully developed turbulence,
-\textit{Phys.\ Rev.\ Lett.}\ \textbf{72} (1994), 336--339.
+She, Z.-S., L\'ev\^eque, E.:
+Universal scaling laws in fully developed turbulence.
+Phys.\ Rev.\ Lett.\ \textbf{72}, 336--339 (1994)
 
 \bibitem{SW95}
-Z.-S.\ She and E.\,C.\ Waymire,
+She, Z.-S., Waymire, E.C.:
 Quantized energy dissipation and log-Poisson statistics in fully
-developed turbulence,
-\textit{Phys.\ Rev.\ Lett.}\ \textbf{74} (1995), 262--265.
+developed turbulence.
+Phys.\ Rev.\ Lett.\ \textbf{74}, 262--265 (1995)
 
 \bibitem{SZ09}
-Z.-S.\ She and Z.-X.\ Zhang,
+She, Z.-S., Zhang, Z.-X.:
 Universal hierarchical symmetry for turbulence and general multi-scale
-fluctuation systems,
-\textit{Acta Mech.\ Sinica}\ \textbf{25} (2009), 279--294.
+fluctuation systems.
+Acta Mech.\ Sinica \textbf{25}, 279--294 (2009)
 
 \bibitem{Vil09}
-C.\ Villani,
-\textit{Optimal Transport: Old and New},
-Springer, Berlin, 2009.
+Villani, C.:
+Optimal Transport: Old and New.
+Springer, Berlin (2009)
 
 \end{thebibliography}
 
