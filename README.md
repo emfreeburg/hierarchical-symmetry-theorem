@@ -11,6 +11,22 @@ Independent Researcher
 
 Within i.i.d. multiplicative cascades, a single axiom—the hierarchical symmetry, a linear contraction on incremental scaling exponents—is shown to be necessary and sufficient for the cascade multiplier to be log-Poisson. We prove: (1) a characterization theorem determining the log-Poisson law with explicit parameters, within the class of *all* multipliers with finite lattice moments; (2) a classification theorem locating the log-Poisson class inside the log-infinitely-divisible family and identifying the mechanism by which every rival sub-family fails the symmetry; (3) a stability theorem with sharp constants—(1+beta)^{1/2} when the limiting increment is known, sqrt(2) when it is fitted—and (4) an unconditional propagation theorem transferring the bound to the multiplier distribution at the sharp rate Theta(sqrt(epsilon)), with a matching lower bound. Beyond independence, the classification extends *exactly* at the level of asymptotic statistics (limiting cumulant generating function, large deviations, multifractal spectrum) and *provably not* at the level of laws: an explicit stationary ergodic Markov multiplier satisfies the symmetry exactly with a non-log-Poisson marginal, while exchangeable multipliers collapse to the i.i.d. log-Poisson cascade and finite-state Markov multipliers cannot satisfy the symmetry at all. In the continuous category of exactly scale-invariant log-infinitely-divisible multifractal random measures, no finite moment window of structure-function exponents identifies the cascade class, whereas at the level of the scale-invariance generator the symmetry selects exactly the Barral–Mandelbrot compound Poisson cascade, with scale-ratio-free stability constants. The proofs reduce to second-moment identities on [0,1] via the change of variables u = e^{kx}, boundedness of the multiplier (ess sup W = r^gamma), and multiplicative couplings.
 
+## Reader's Companion — Plain-Language Site
+
+**[When Hierarchy Imposes Form](https://emfreeburg.github.io/hierarchical-symmetry-theorem/)**
+is a plain-language companion to the paper. It explains the result and its
+context for a general audience while staying faithful to the paper's scope —
+the formal classification is established within i.i.d. multiplicative cascades.
+
+- **Live:** <https://emfreeburg.github.io/hierarchical-symmetry-theorem/>
+- **Single self-contained file:**
+  [`artifact/when-hierarchy-imposes-form.html`](https://emfreeburg.github.io/hierarchical-symmetry-theorem/artifact/when-hierarchy-imposes-form.html)
+  — the entire page (text, figures, styles) inlined into one portable HTML file.
+
+The companion is served via GitHub Pages from the
+[`gh-pages`](../../tree/gh-pages) branch; the paper itself remains the
+authoritative statement of the results.
+
 ## Read the Paper
 
 - **[PAPER.md](PAPER.md)** — the full paper, readable directly on GitHub.
