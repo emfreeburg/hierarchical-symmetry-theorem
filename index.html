@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hierarchical Symmetry Selects Log-Poisson Cascades — A Reader's Companion</title>
+<meta name="description" content="Why hierarchical symmetry forces the log-Poisson cascade — a reader&#x27;s companion to E. M. Freeburg&#x27;s classification, uniqueness, and stability theorem (arXiv:2604.01632).">
+<meta name="author" content="E. M. Freeburg">
+<meta name="robots" content="all, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://emfreeburg.github.io/hierarchical-symmetry-theorem/">
+<meta name="theme-color" content="#9c6a1c">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<!-- icons / PWA -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- open graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="When Hierarchy Imposes Form">
+<meta property="og:title" content="When Hierarchy Imposes Form">
+<meta property="og:description" content="Why hierarchical symmetry forces the log-Poisson cascade — a reader&#x27;s companion to E. M. Freeburg&#x27;s classification, uniqueness, and stability theorem (arXiv:2604.01632).">
+<meta property="og:url" content="https://emfreeburg.github.io/hierarchical-symmetry-theorem/">
+<meta property="og:image" content="https://emfreeburg.github.io/hierarchical-symmetry-theorem/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="When Hierarchy Imposes Form — E. M. Freeburg">
+<!-- twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="When Hierarchy Imposes Form">
+<meta name="twitter:description" content="Why hierarchical symmetry forces the log-Poisson cascade — a reader&#x27;s companion to E. M. Freeburg&#x27;s classification, uniqueness, and stability theorem (arXiv:2604.01632).">
+<meta name="twitter:image" content="https://emfreeburg.github.io/hierarchical-symmetry-theorem/og-cover.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "When Hierarchy Imposes Form",
+  "description": "Why hierarchical symmetry forces the log-Poisson cascade — a reader's companion to E. M. Freeburg's classification, uniqueness, and stability theorem (arXiv:2604.01632).",
+  "image": "https://emfreeburg.github.io/hierarchical-symmetry-theorem/og-cover.png",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "E. M. Freeburg",
+    "url": "https://orcid.org/0009-0002-2140-9131",
+    "identifier": "https://orcid.org/0009-0002-2140-9131"
+  },
+  "about": [
+    "turbulence",
+    "intermittency",
+    "multifractals",
+    "log-Poisson cascades",
+    "hierarchical symmetry"
+  ],
+  "isBasedOn": "https://arxiv.org/abs/2604.01632",
+  "url": "https://emfreeburg.github.io/hierarchical-symmetry-theorem/",
+  "mainEntityOfPage": "https://emfreeburg.github.io/hierarchical-symmetry-theorem/",
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true
+}
+</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="titlepage">
+<header>
+  <div class="hero-art"><img src="assets/hero-art.svg" alt="" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow paper">Hierarchical Symmetry Selects Log-Poisson Cascades</p>
+    <p class="paper-status"><span class="status-dot" aria-hidden="true"></span><a href="https://link.springer.com/journal/10955" target="_blank" rel="noopener">Under review · Journal of Statistical Physics</a></p>
+    <h1>When Hierarchy<br>Imposes <span class="em">Form</span>.</h1>
+    <p class="byline">E. M. Freeburg<a class="orcid-inline" href="https://orcid.org/0009-0002-2140-9131" target="_blank" rel="noopener" title="ORCID iD 0009-0002-2140-9131"><svg class="orcid-i" viewBox="0 0 256 256" aria-hidden="true"><path fill="#A6CE39" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><g fill="#fff"><path d="M86.3 186.2H70.9V79.1h15.4v107.1z"/><path d="M108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4z"/><path d="M88.7 56.8c0 5.5-4.5 10.1-10.1 10.1-5.6 0-10.1-4.6-10.1-10.1 0-5.6 4.5-10.1 10.1-10.1 5.6 0 10.1 4.6 10.1 10.1z"/></g></svg><span>0009-0002-2140-9131</span></a></p>
+    <p class="lede">Turn on a tap, watch smoke climb, or look down at a storm from orbit, and the same thing is happening — energy poured in at a large scale, breaking into ever-smaller swirls until it dies away as heat. For <b>a hundred years</b> physicists could describe the shape of that breaking in fine detail, yet could not say why it takes that shape and not some other. It comes down to a single symmetry of the cascade — and to how little room that symmetry, once it is stated exactly, turns out to leave.</p>
+    <div class="ribbon">
+      <a class="chip" href="https://arxiv.org/abs/2604.01632" target="_blank" rel="noopener"><svg class="chip-i arxiv" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/></svg><span class="chip-l">arXiv</span><span class="chip-d">2604.01632</span></a>
+      <a class="chip" href="https://github.com/emfreeburg/hierarchical-symmetry-theorem" target="_blank" rel="noopener"><svg class="chip-i github" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="chip-l">emfreeburg/hierarchical-symmetry-theorem</span></a>
+    </div>
+  </div>
+</header>
+
+
+<div class="framing"><div class="wrap"><p>A reader's companion to E. M. Freeburg's 2026 theorem on hierarchical symmetry in multiplicative cascades. It explains the result and its context in plain terms while staying faithful to the paper's scope: the formal proof applies within the standard <em>i.i.d. multiplicative cascade</em> model used to study intermittency.</p></div></div>
+
+<figure class="band bleed">
+  <img src="assets/cascade-field.png" alt="A multiplicative cascade — a multifractal measure">
+  <div class="grad"></div>
+  <figcaption><b>What you are looking at.</b> Begin with a square of even brightness. Divide it, and hand the brightness out unevenly among the pieces — some brighten, some dim — then repeat inside every piece, scale after scale. This is the result. Brightness does not even out; it <em>hoards</em>, pooling into a few bright filaments while the rest goes dark — a little of the fluid carrying most of the violence. That is <em>intermittency</em>, the fact this whole story has to explain.</figcaption>
+</figure>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">The problem</p>
+    <h2>Turbulence remains the unfinished problem of classical physics.</h2>
+    <p class="drop big">It is the last great unsolved piece of the physics of ordinary things — air, water, weather — and it hides in plain sight. Stir a fluid hard enough and it stops sliding in smooth sheets and breaks into whirls: big ones shedding smaller ones, those shedding smaller ones again. Physicists call this a <em>cascade</em>. In 1922 the meteorologist Lewis Fry Richardson caught it in four lines, better than any equation:</p>
+    <div class="rhyme">Big whirls have little whirls<br>That feed on their velocity,<br>And little whirls have lesser whirls<br>And so on to viscosity.<span class="who">— Lewis Fry Richardson, 1922</span></div>
+    <p>In 1941 the Russian mathematician Andrey Kolmogorov turned the rhyme into a theory.<sup class="fn"><a id="fnref1" href="#fn1">1</a></sup> His move was to ask not where the energy is, but how much of it lives at each size — and to assume that, deep in the cascade, the answer depends on the size alone. Fixed numbers fall out of that one assumption: the <em>scaling exponents</em>, which say precisely how the typical swirl weakens as you look at finer and finer scales. If the cascade is perfectly even, every swirl passing energy down in the same tidy proportion, those exponents line up along a clean, straight line — the same for every turbulent flow. It was a landmark. It was also, as the decades showed, incomplete.</p>
+    <p>But real turbulence is not even, and that straight line bends: the high moments — the rare, violent events — fall below the clean prediction. The energy does not spread itself politely across the fluid; it <em>concentrates</em>. Most of the flow drifts along calm while the violence collects into rare, thread-thin filaments. That downward bend is the fingerprint of <em>intermittency</em>, and it turned a solved problem back into an open one.</p>
+    <div class="pull">"When I meet God, I am going to ask him two questions: why relativity, and why turbulence? I really believe he will have an answer for the first."<span class="cite">— attributed to Werner Heisenberg</span></div>
+    <div class="aside">
+      <div class="lab">The real question</div>
+      <p>By the 1960s the picture had both a shape and a flaw, and the open question had sharpened. It was no longer <em>how fast</em> energy cascades but <em>how unevenly</em>: each time a larger eddy hands its energy to smaller ones, the intensity is multiplied by some random factor, and everything still unexplained — the failure at the extremes, the filaments, the bursts — comes down to one missing quantity, the <em>distribution</em> of that factor. Pin down that single distribution and the rest of the story follows from it.</p>
+    </div>
+    <aside class="frac-cite"><b>About the figures.</b> Each section rests on a <em>fractal</em> &mdash; a shape whose parts repeat the whole at every scale. They are not decoration: self-similarity across scales is the exact signature a cascade leaves behind, and these are its cleanest portraits. The figure after each name is its <em>fractal dimension</em>, a measure of how densely the shape fills space. &mdash; <span class="nm">Koch snowflake</span> <b class="dim">&asymp;1.262D</b>: replace the middle third of every edge with a smaller triangle, forever &mdash; a finite area inside a border of infinite length.</aside>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">Background</p>
+    <h2>The path from observation to proof.</h2>
+    <div class="tl">
+      <div class="ev"><div class="yr">1822 · 1845</div><h3>The Navier–Stokes equations</h3><p>The equations governing fluid motion are written down (Navier, 1822; Stokes, 1845).<sup class="fn"><a id="fnref2" href="#fn2">2</a></sup> Turbulence is the regime in which they cannot be solved — the cascade is the empirical picture of that regime.</p></div>
+      <div class="ev"><div class="yr">1922</div><h3>The cascade is named</h3><p>Lewis Fry Richardson gives the picture its language: energy tumbling from big whirls to small. A vision, not yet a mathematics.</p></div>
+      <div class="ev"><div class="yr">1941 · 1962</div><h3>A first law, and a patch for intermittency</h3><p>Andrey Kolmogorov derives the clean, even cascade (1941), then proposes the missing distribution is <em>log-normal</em>, the bell curve's multiplicative cousin (1962). It fits roughly; the extremes are off.</p></div>
+      <div class="ev"><div class="yr">1974</div><h3>The cascade becomes fractal</h3><p>Benoît Mandelbrot recasts the cascade as a fractal object — intermittency as the cascade concentrating onto a thin, self-similar set. The geometry of the violence comes into focus.</p></div>
+      <div class="ev"><div class="yr">1994</div><h3>A symmetry is proposed</h3><p>Zhen-Su She and Emmanuel Lévêque stop guessing the distribution and instead posit a <em>symmetry</em> the hierarchy must obey. Out falls a different law — <em>log-Poisson</em> — matching the data closely, extremes and all; Bernard Dubrulle reaches the same law independently that same year. A year on, She and Edward Waymire (1995) recast it as a <em>quantized energy cascade</em>, the discrete-event picture that gives the law its name. It is a physical argument, not a proof.</p></div>
+      <div class="ev cap"><div class="yr">2026</div><h3>The conjecture becomes a theorem</h3><p>E. M. Freeburg states the She&ndash;L&eacute;v&ecirc;que symmetry as a single clean rule and proves it does not merely <em>allow</em> log-Poisson but <em>forces</em> it: no other distribution can satisfy the rule. The central argument is formalized and checked by machine, down to a handful of standard logical axioms.</p></div>
+    </div>
+    <aside class="frac-cite"><span class="nm">Sierpi&#324;ski triangle</span> <b class="dim">&asymp;1.585D</b> &mdash; log&nbsp;3 &divide; log&nbsp;2. Cut the central quarter from a triangle, then do the same to each of the three that remain, on and on. What is left is mostly holes &mdash; the one rule echoing at every scale, the way each line of this timeline restates the same cascade at a finer grain.</aside>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">The conjecture</p>
+    <h2>An exceptional fit, with no proof of necessity.</h2>
+    <p>For decades the chase went straight at the distribution: guess a law for that multiplier, then test it against the data. In 1994 Zhen-Su She and Emmanuel Lévêque tried the reverse. Rather than guess the law, they asked what <em>symmetry</em> the hierarchy of scales must obey — what fixed relation has to hold between one degree of violence and the next — and let the distribution fall out of the symmetry.<sup class="fn"><a id="fnref3" href="#fn3">3</a></sup> The wager was that the deepest question about turbulence was not <em>which law</em> but <em>what constraint</em>. Two very different answers were now on the table:</p>
+    <div class="vs">
+      <div class="ch"><div class="nm">log-normal</div><div class="sub">Kolmogorov · 1962</div><p>The natural guess if intensity is shaped by many small independent factors multiplying together. Smooth and familiar — and wrong about the rare, violent extremes that matter most.</p></div>
+      <div class="ch win"><div class="nm">log-Poisson</div><div class="sub">She &amp; Lévêque 1994 · She &amp; Waymire 1995</div><p>Treats intensity as knocked down by discrete, countable events — count the hits a region took. Fits the extremes. The law the symmetry pointed toward.</p></div>
+    </div>
+    <div class="aside">
+      <div class="lab">A clue in the geometry</div>
+      <p>In real turbulence the most violent structures are thin <em>vortex filaments</em> — threads of concentrated spin, living on a thin set: a Cantor dust, where almost everything has been removed and only a sparse, intense remainder survives. The log-Poisson theory carries a single number for the geometry of that most-singular set — its <em>codimension</em> — and for turbulence it is set to two:<sup class="fn"><a id="fnref4" href="#fn4">4</a></sup> a one-dimensional thread is missing two of the three dimensions around it.</p>
+    </div>
+    <p>And there it sat for three decades. The symmetry plainly <em>allowed</em> log-Poisson, and the fit was the best anyone had — but no one had shown it <em>demanded</em> log-Poisson. A close fit is not a proof: the constraint might be merely <em>consistent</em> with the law while quietly permitting a dozen others. What was missing was a proof of necessity.</p>
+    <aside class="frac-cite"><span class="nm">Cantor dust</span> <b class="dim">&asymp;0.631D</b> &mdash; log&nbsp;2 &divide; log&nbsp;3. Delete the middle third of a line, then of each surviving piece, endlessly. Less than a line, more than a point &mdash; the proof&rsquo;s &ldquo;most-singular set.&rdquo;</aside>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">The result</p>
+    <h2>The selection is proven necessary, not merely sufficient.</h2>
+    <p class="big">That proof is what the result supplies.<sup class="fn"><a id="fnref5" href="#fn5">5</a></sup> Working inside the standard model of intermittency — an <em>i.i.d. multiplicative cascade</em>, where a conserved quantity is split by independent random factors down the scales — it takes the She–Lévêque symmetry, sharpens it into a single clean rule on the cascade's scaling exponents (the paper's axiom A1), and settles the question in the strongest direction there is: the rule does not merely <em>allow</em> log-Poisson — it <em>forces</em> it, and a classification rules out every rival multiplier law. A stability result adds that an <em>approximate</em> symmetry yields an <em>approximately</em> log-Poisson cascade, drifting by no more than a bounded amount. Within that model the fit was never a coincidence; it was the only outcome the symmetry permits. The symmetry itself is an assumption about nature, tested against data, not read off the fluid equations: the theorem works inside the well-established phenomenological cascade picture, and whether real Navier–Stokes turbulence obeys it closely enough for the conclusions to transfer directly remains an empirical and modeling question. What the theorem settles is what must follow once the symmetry holds.</p>
+    <p>Three properties make it more than a tidy result.</p>
+    <div class="vs">
+      <div class="ch"><div class="nm">An "if and only if"</div><div class="sub">necessary &amp; sufficient</div><p>The symmetry and the law are the same fact stated two ways. Have one and you have the other, with every parameter readable from the data.</p></div>
+      <div class="ch"><div class="nm">A basin, not a blade</div><div class="sub">stable</div><p>If the symmetry holds only approximately, the law is only approximately log-Poisson — by a precise, bounded amount. Real, noisy data cannot fall through a crack.</p></div>
+    </div>
+    <div class="aside">
+      <div class="lab">From a good guess to a theorem</div>
+      <p>For thirty years log-Poisson was the best answer going. She, Lévêque, Dubrulle and Waymire built a strong physical and heuristic case for it — but it remained an answer someone had <em>chosen</em>, a model that happened to fit. What was missing was a rigorous characterization: a proof that the symmetry leaves no other option. The result supplies it — classification, uniqueness and stability together — and the law stops being something a theorist proposes and the data tolerates, becoming the single solution the constraint allows, the way π is not a good model of a circle but the only ratio a circle can have.</p>
+    </div>
+    <aside class="frac-cite"><span class="nm">Multiplicative cascade</span> <b class="dim">multifractal</b> &mdash; Not one dimension but a spectrum. A quantity split again and again into random fractions down a branching tree &mdash; and that spectrum of exponents is exactly what the theorem pins down.</aside>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">The mechanism</p>
+    <h2>A single rule, repeated across every scale.</h2>
+    <p>How can a single symmetry rule out every distribution but one? The mechanism is gentler than the result sounds. Sort every structure in a turbulent flow by how violent it is: a vast calm background, then rarer, stronger swirls, then rarer-still, fiercer filaments, on up a ladder of intensity. The hierarchical symmetry — the <em>hierarchy</em> of the title, the paper's axiom A1 — says just one thing: the rule carrying you from each rung of that ladder to the next is the <em>same</em> rule, all the way up. And that rule is a <em>contraction</em>. Apply it again and again and the rungs are drawn toward one limiting pattern, wherever you start — the Banach fixed-point principle,<sup class="fn"><a id="fnref6" href="#fn6">6</a></sup> the same thing that makes the Lévy C curve the single shape its folding rule can settle into.</p>
+    <figure class="frac-fig flat"><img src="assets/levy-c.svg" alt="The Lévy C curve"><figcaption><span class="nm">Lévy C curve</span> <b class="dim">2D</b> &mdash; why this figure? It is built by one rule folded into itself without end, and out of that one repeated rule a single shape emerges — so dense it all but fills the plane. The proof&rsquo;s symmetry works the same way: a contraction with exactly one fixed form. Here that uniqueness is something you can see rather than take on faith.</figcaption></figure>
+    <p>Fixing that limiting pattern does something surprising: it forces the cascade's multiplier to be <em>bounded</em> — there is a hardest kick the cascade can deliver, and nothing exceeds it. And a bounded quantity is pinned down completely by its sequence of averages, its moments: rescaled to the unit interval, its law is the only one with those moments — a <em>Hausdorff moment problem</em>, and the actual engine of the uniqueness proof. The symmetry fixes every one of those moments — so it fixes the whole law. That settles <em>how many</em> laws are possible, exactly one, before anyone has asked which.</p>
+    <p>Which one, and why "Poisson"? To see the survivor, look within the natural family of laws built up from many small independent steps — the <em>infinitely divisible</em> laws. A theorem of Lévy and Khinchin<sup class="fn"><a id="fnref7" href="#fn7">7</a></sup> sorts every one of them into three ingredients: a steady drift, a smooth Gaussian (bell-curve) part, and a Poisson part that counts discrete, independent shocks. The symmetry forces the Gaussian part to vanish; what is left is pure Poisson. That is the whole of the "log-<em>Poisson</em>" name — how singular a patch of fluid becomes is set by how many discrete shocks it took, and a tally of rare, independent hits is exactly what a Poisson law describes.</p>
+    <div class="pull teal">For a hundred years the pattern was plain to see. What the proof adds is that, within the cascade, the pattern never had a choice.</div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">Generality</p>
+    <h2>The organizing principle is a form, not a substance.</h2>
+    <p>Notice what the argument never touched: not water, not air, not a single fact about vortices. It used only that the system is a cascade — a conserved quantity handed down and split across nested scales — and that the one symmetry holds. Its reach is therefore as wide as that description, and cascades are not only in fluids. Wherever a quantity is repeatedly divided across nested scales — rainfall through the sizes of storms, the branching of blood vessels, perhaps the swings of a market — the same skeleton may be present. A law about one cascade becomes a <em>candidate</em> law about the others: to be tested, not assumed.</p>
+    <div class="pull">"Clouds are not spheres, mountains are not cones, coastlines are not circles, and bark is not smooth, nor does lightning travel in a straight line."<span class="cite">— Benoît Mandelbrot, The Fractal Geometry of Nature</span></div>
+    <p>An older idea sits underneath this. For centuries, thinkers who sensed a single pervasive organizing force in nature reached for a <em>substance</em> to carry it — an all-pervading aether, a cosmic life-energy. They were pointing at something real, but in the wrong category. The organizing thing was never a material to be bottled: it is a law of form — a statistical symmetry that any deep cascade is compelled to obey.</p>
+    <div class="aside">
+      <div class="lab">What is proven, and what is not</div>
+      <p>What is proven is the mathematics: for genuine cascades, the symmetry forces the one law. What is observed is narrower — the law reads cleanly on real turbulence, the system it was born from. Whether it reads on a market, a forest, or a heartbeat is a separate question, answered one domain at a time, and some, like the human heartbeat, prove too gentle a cascade to register. The mathematics is general; the reach is earned.</p>
+    </div>
+    <aside class="frac-cite"><span class="nm">Barnsley fern</span> <b class="dim">&asymp;1.8D</b> &mdash; box-counting estimate. Four shrink-and-rotate rules, chosen at random tens of thousands of times, settle into a fern &mdash; living form from pure repeated proportion.</aside>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">Application</p>
+    <h2>A fixed reference for proper form — and what it might let us ask.</h2>
+    <p>Grant the mathematics its home ground — a real, deep cascade — and a new kind of question opens up. Once there is a single form a healthy cascade <em>must</em> take, that form is a fixed reference: a true zero, the thing any ruler needs. Against it one could, in principle, ask as a single number how far a given cascade has drifted from the form it would hold if nothing obstructed its flow.</p>
+    <p>This is what we mean by <em>health of form</em>: a standard for whether a system is in good order, set not by an observer's expectations but by the system's own proper shape. Picture a jet engine whose airflow has begun, invisibly, to stiffen at the smallest scales — its cascade drifting from the proven form long before any temperature or pressure gauge twitches. Most diagnostics watch averages, levels, setpoints; this would watch whether the <em>structure</em> of the fluctuations across scales is still intact. The theorem supplies the fixed reference such a gauge would need; the instrument that would read it — the statistics of estimating that drift from finite, noisy data — is a separate theory, not yet built.</p>
+    <div class="pull">A fixed shape for health turns "is this system sound" from a metaphor toward a question with an answer — wherever a system runs as a cascade deep enough to be asked.</div>
+    <aside class="frac-cite"><span class="nm">Julia set &mdash; the Douady rabbit</span> <b class="dim">&asymp;1.393D</b> &mdash; Keep the points whose orbit under z &rarr; z&sup2; + c stays bounded (here c = &minus;0.123 + 0.745i). The Mandelbrot set is the atlas of every c whose rabbit holds together.</aside>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <p class="kicker">Lineage</p>
+    <h2>The search for the proper form of things is older than the physics.</h2>
+    <p>The wish underneath health-of-form — to know the form a thing keeps when nothing is impeding it — is far older than any cascade. Aristotle held that each thing has a form it strives toward, and that health is simply nearness to that form. The biologist D'Arcy Thompson argued that living shapes are written by the mathematics of growth rather than by accident. Mandelbrot showed that roughness itself — coastlines, clouds, turbulence — has an exact geometry. Each was reaching, in the language of his own century, for one idea: that beneath the particulars of any single case there is a rule the thing is meant to follow.</p>
+    <figure class="frac-fig"><img src="assets/dragon.svg" alt="Heighway dragon — a paper-fold curve that tiles the plane"><figcaption><span class="nm">Heighway dragon</span> <b class="dim">2D</b> &mdash; Fold a paper strip in half the same way over and over, then open each crease to a right angle. The curve never crosses itself, yet fills the very plane it tiles.</figcaption></figure>
+    <p>Even a painter seems to have reached toward it. In June 1889, from the window of an asylum at Saint-Rémy, Vincent van Gogh painted <em>The Starry Night</em>. More than a century later, physicists who measured the painting’s luminance and brushwork<sup class="fn"><a id="fnref8" href="#fn8">8</a></sup> reported scaling behaviors that resemble aspects of turbulent cascades — a striking, much-debated claim. Set the canvas beside the Heighway dragon above and a quieter kinship surfaces: the same curl, nested within itself at every scale — the dragon that self-similarity in its exact, deterministic form, drawn by one folded rule; the night sky its turbulent, statistical cousin, drawn by a hand. Two faces of one grammar, a resemblance we have not found remarked elsewhere. With no equations at all, van Gogh had already drawn it.</p>
+    <p class="big">What is new is narrow, and it is earned. For one sharply drawn class of systems — deep cascades — the proper form is no longer a metaphor or a lucky fit but a theorem: the symmetry leaves room for exactly one law. And it is only the title, said slowly. The <em>hierarchy</em> is the cascade itself — scale nested inside scale, each rung of intensity standing to the next in one fixed relation. To say hierarchy <em>imposes form</em> is to say that relation does not merely permit a shape; where the cascade runs deep, it compels one. A hundred years after a rhyme about whirls, the rhyme has been given its reason.</p>
+  </div>
+</section>
+
+<div class="plate">
+  <div class="wrap">
+    <figure class="inset"><img style="height:auto;width:100%;object-fit:contain;display:block" src="assets/starry-night.jpg" alt="Vincent van Gogh, The Starry Night (1889)"><figcaption>Vincent van Gogh, <em>The Starry Night</em> (1889). Public domain.</figcaption></figure>
+  </div>
+</div>
+<footer>
+  <div class="wrap">
+    <p class="kicker">Notes</p>
+    <ol class="notes">
+      <li id="fn1">A. N. Kolmogorov turned the cascade into mathematics: the even, self-similar law of 1941 (<em>K41</em>) and the log-normal refinement of 1962 (<em>K62</em>) that first reached for intermittency. <a class="fnback" href="#fnref1" aria-label="back to text">&#8617;</a></li>
+      <li id="fn2">The motion of a fluid is governed by the Navier&ndash;Stokes equations (Navier, 1822; Stokes, 1845). Whether their solutions always stay smooth is itself unproven &mdash; one of the Clay Mathematics Institute&rsquo;s Millennium Prize Problems &mdash; and turbulence is exactly the regime where the question bites. <a class="fnback" href="#fnref2" aria-label="back to text">&#8617;</a></li>
+      <li id="fn3">Z.-S. She &amp; E. L&eacute;v&ecirc;que, <em>Universal scaling laws in fully developed turbulence</em>, Phys. Rev. Lett. <strong>72</strong>, 336 (1994), recast the cascade&rsquo;s intermittency as a <em>symmetry</em> of the hierarchy of structures; B. Dubrulle, Phys. Rev. Lett. <strong>73</strong>, 959 (1994), reached the log-Poisson law independently. Z.-S. She &amp; E. C. Waymire, <em>Quantized Energy Cascade and Log-Poisson Statistics in Fully Developed Turbulence</em>, Phys. Rev. Lett. <strong>74</strong>, 262 (1995), made that symmetry concrete as a cascade of discrete, Poisson-counted events &mdash; the log-Poisson law that fits the violent extremes. <a class="fnback" href="#fnref3" aria-label="back to text">&#8617;</a></li>
+      <li id="fn4">In the She&ndash;L&eacute;v&ecirc;que model the most intense structures have codimension&nbsp;2 &mdash; one-dimensional filaments threading three-dimensional space &mdash; which is the value the geometry of the most-singular set returns. <a class="fnback" href="#fnref4" aria-label="back to text">&#8617;</a></li>
+      <li id="fn5">E. M. Freeburg, <em>Hierarchical Symmetry Selects Log-Poisson Cascades</em> (arXiv:2604.01632). Its central results are formalized in Lean and checked by a small, trusted kernel against three standard axioms. <a class="fnback" href="#fnref5" aria-label="back to text">&#8617;</a></li>
+      <li id="fn6">The Banach fixed-point theorem (1922): a contraction on a complete space &mdash; a map that always shrinks the distance between points &mdash; has exactly one fixed point, reached by iterating from anywhere. It is the intuition behind &ldquo;one rule, repeated, with a single possible form,&rdquo; and governs the convergence of the scaling exponents; the uniqueness of the law itself is settled separately, by the moment argument below. <a class="fnback" href="#fnref6" aria-label="back to text">&#8617;</a></li>
+      <li id="fn7">The L&eacute;vy&ndash;Khinchin representation classifies every infinitely divisible distribution as a combination of a deterministic drift, a Gaussian part, and a Poisson part that counts discrete jumps. It is the machinery that <em>identifies</em> the surviving law once uniqueness is in hand: forcing the Gaussian part to vanish is what leaves the cascade purely log-Poisson. <a class="fnback" href="#fnref7" aria-label="back to text">&#8617;</a></li>
+      <li id="fn8">Arag&oacute;n et&nbsp;al. (2006) and Huang et&nbsp;al., <em>Physics of Fluids</em> (2024) measured luminance and brushstroke statistics in <em>The Starry Night</em> and reported scaling behaviors that resemble aspects of turbulent cascades. <a class="fnback" href="#fnref8" aria-label="back to text">&#8617;</a></li>
+    </ol>
+    <p class="kicker">Colophon</p>
+    <dl class="colophon">
+      <dt>Companion to</dt><dd>E. M. Freeburg, <em>Hierarchical Symmetry Selects Log-Poisson Cascades: Classification, Uniqueness, and Stability</em> (arXiv:2604.01632)</dd>
+      <dt>Lineage</dt><dd>Navier (1822) · Stokes (1845) · Richardson (1922) · Kolmogorov (1941/1962) · Mandelbrot (1974) · She &amp; Lévêque (1994) · Dubrulle (1994) · She &amp; Waymire (1995)</dd>
+      <dt>Quotations</dt><dd>Werner Heisenberg; Benoît Mandelbrot, <em>The Fractal Geometry of Nature</em></dd>
+      <dt>Figures</dt><dd>the cascade field, the Lévy&nbsp;C curve, and the per-section motifs — Koch snowflake, Sierpiński triangle, Cantor dust, a multiplicative cascade tree, the Barnsley fern, the Julia set (the Douady rabbit) and the Heighway dragon</dd>
+      <dt>Issued</dt><dd>June 2026</dd>
+      <dt>About this page</dt><dd>A companion artifact, not a substitute for the source. The canonical technical references are the <a href="https://arxiv.org/abs/2604.01632" target="_blank" rel="noopener">arXiv preprint</a> and its <a href="https://github.com/emfreeburg/hierarchical-symmetry-theorem" target="_blank" rel="noopener">Lean formalization</a>.</dd>
+      <dt>License</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">CC BY 4.0</a> — free to read, share, adapt &amp; train on, with credit</dd>
+    </dl>
+  </div>
+</footer>
+
+</body>
+</html>
