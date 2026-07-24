@@ -5,6 +5,8 @@ Independent Researcher
 
 **arXiv:** [2604.01632](https://arxiv.org/abs/2604.01632) (published: **v2**, June 2026 — this repository carries **v3**; the arXiv replacement is forthcoming)
 
+[![Lean CI](https://github.com/emfreeburg/hierarchical-symmetry-theorem/actions/workflows/lean-ci.yml/badge.svg)](https://github.com/emfreeburg/hierarchical-symmetry-theorem/actions/workflows/lean-ci.yml) — every push re-verifies the full formalization on GitHub's runners: `lake build` (the kernel checks every proof) plus the whole-library axiom audit (0 `sorry`, no custom axioms).
+
 > **Version 3.** This repository carries **v3** — an erratum and
 > strengthening of Theorem 17 (the v2 claim "no finite moment window
 > identifies the class" is false as stated: impersonators exist for every
@@ -43,7 +45,9 @@ authoritative statement of the results.
   numbering, constants, bibliography), up to two markdown conventions:
   section headings are title-cased, and inline mathematics uses GitHub's
   dollar-backtick delimiters.
-- **[versions/v2/](versions/v2/)** — the official arXiv-watermarked PDF.
+- **[versions/v3/v3-preprint.pdf](versions/v3/v3-preprint.pdf)** — the compiled v3 PDF
+  (placeholder until the arXiv v3 announcement).
+- **[versions/v2/](versions/v2/)** — the official arXiv-watermarked v2 PDF.
 - The authoritative source is the self-contained LaTeX project in
   [`paper/`](paper/), in two formats: arXiv/amsart (`main.tex`, 32 pp.)
   and Journal of Statistical Physics / Springer Nature
@@ -118,7 +122,8 @@ lake env lean AxiomAudit.lean   # whole-library axiom audit (must print PASS)
 │   └── LICENSE           #   Apache-2.0 (the formalization's code license)
 └── versions/             # Official arXiv PDFs; frozen superseded sources
     ├── v1/               #   April 2026 (14 pp.) — PDF + frozen source
-    └── v2/               #   June 2026 (23 pp.) — PDF + frozen source
+    ├── v2/               #   June 2026 (23 pp.) — PDF + frozen source
+    └── v3/               #   preprint PDF (placeholder until arXiv announce)
 ```
 
 ## Versions
