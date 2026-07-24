@@ -1701,7 +1701,6 @@ tilt `η` satisfies the Theorem-10 moment bounds — finite or infinite
 activity alike, with no minimum-jump hypothesis.  At `k = 1` the
 conservation drift is rigid (`a = ‖η‖ = λ(1−β)`), so no drift slack is
 spent (the paper's `e^{a₀+1}` can be read `e^{a₀}` here). -/
-
 theorem theorem11_W1_upper {β : ℝ} (hβ : β ∈ Set.Ioo (0 : ℝ) 1)
     (νt : Measure ℝ) (hsupp : ∀ᵐ u ∂νt, u ∈ Set.Ico 0 1)
     [IsFiniteMeasure (νt.withDensity fun u => ENNReal.ofReal (1 - u))]
@@ -1960,7 +1959,6 @@ theorem theorem11_rate_upper {β ε : ℝ} (hβ : β ∈ Set.Ioo (0 : ℝ) 1)
 The cumulant-level hypotheses of Theorem 10 (the printed `(a, σ², ν)`
 triplet with A1 residuals of size `ε`) propagate to the multiplier law:
 `W₁(law W, law W₀) ≤ K_∞ √ε`, at `k = 1`. -/
-
 theorem theorem11_from_theorem10 {ν : Measure ℝ} {a σ2 β ε : ℝ}
     (hσ2 : 0 ≤ σ2) (hβ : β ∈ Set.Ioo (0 : ℝ) 1)
     (hgint : ∀ p : ℝ, 0 ≤ p → Integrable (gIntegrand 1 p) ν)

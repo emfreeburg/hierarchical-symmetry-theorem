@@ -58,29 +58,29 @@ multiplier to be log-Poisson.  We prove: (1)~a characterization
 theorem determining the log-Poisson law with explicit parameters,
 within the class of \emph{all} multipliers with finite lattice
 moments; (2)~a classification theorem locating the log-Poisson class
-inside the log-infinitely-divisible family and identifying how every
-rival sub-family fails the symmetry; (3)~a stability theorem with
-explicit constants---$(1+\beta)^{1/2}$ known increment, $\sqrt2$
-fitted, sharp at the variance level---and (4)~an unconditional
-propagation theorem transferring the bound to the multiplier
-distribution at the sharp rate $\Theta(\sqrt\varepsilon)$, with a
-matching lower bound.  Beyond independence, the classification
-extends \emph{exactly} at the level of asymptotic statistics (the
-limiting cumulant generating function at lattice orders, with large
-deviations and the multifractal spectrum under off-lattice
-regularity) and \emph{provably not} at the level of laws: an
-explicit stationary ergodic Markov multiplier satisfies the symmetry
-exactly with a non-log-Poisson marginal, while exchangeable
-multipliers with exact scaling collapse to the i.i.d.\ log-Poisson
-cascade and finite-state Markov multipliers cannot satisfy the
-symmetry's real-argument form with nontrivial intermittency.  For
-exactly scale-invariant log-infinitely-divisible multifractal random
-measures, five exact contiguous moment orders identify the cascade
-class while four contiguous orders admit impersonators, and at the
-level of the scale-invariance generator the symmetry selects exactly
-the Barral--Mandelbrot compound Poisson cascade, with
-scale-ratio-free stability constants.  The proofs reduce to
-second-moment identities and multiplicative couplings.
+inside the log-infinitely-divisible family and identifying the
+mechanism by which every rival sub-family fails the symmetry; (3)~a
+stability theorem with sharp constants---$(1+\beta)^{1/2}$ when the
+limiting increment is known, $\sqrt2$ when it is fitted---and (4)~an
+unconditional propagation theorem transferring the bound to the
+multiplier distribution at the sharp rate $\Theta(\sqrt\varepsilon)$,
+with a matching lower bound.  Beyond independence, the classification
+is shown to extend \emph{exactly} at the level of asymptotic
+statistics (limiting cumulant generating function, large deviations,
+multifractal spectrum) and \emph{provably not} at the level of laws:
+an explicit stationary ergodic Markov multiplier satisfies the
+symmetry exactly with a non-log-Poisson marginal, while exchangeable
+multipliers collapse to the i.i.d.\ log-Poisson cascade and
+finite-state Markov multipliers cannot satisfy the symmetry at all.
+In the continuous category of exactly scale-invariant
+log-infinitely-divisible multifractal random measures, no finite
+moment window of structure-function exponents identifies the cascade
+class, whereas at the level of the scale-invariance generator the
+symmetry selects exactly the Barral--Mandelbrot compound Poisson
+cascade, with scale-ratio-free stability constants.  The proofs
+reduce to second-moment identities on $[0,1]$ via the change of
+variables $u = e^{kx}$, boundedness of the multiplier
+($\esssup W = r^\gamma$), and multiplicative couplings.
 \end{abstract}
 
 \maketitle
@@ -144,11 +144,11 @@ generators are eliminated by a second-moment rigidity.
 (Theorem~\ref{thm:stability}).  If A1 holds only approximately, with
 residuals bounded by~$\varepsilon$, then the (tilted, compactified)
 L\'evy measure of the generator is within $K\sqrt{\varepsilon}$ of a
-Dirac mass in the Wasserstein-1 metric, with the constant
+Dirac mass in the Wasserstein-1 metric, with the sharp constant
 $K = ((1+\beta)|\ln r|/|A|)^{1/2}$ when the limiting increment
-$\delta_\infty$ is known, and the constant
-$(2|\ln r|/|A|)^{1/2}$ when $\delta_\infty$ is fitted; both are
-sharp for the underlying variance bounds.
+$\delta_\infty$ is known, and the sharp constant
+$(2|\ln r|/|A|)^{1/2}$ when $\delta_\infty$ is fitted along with
+$\beta$.
 
 \emph{Propagation at the sharp rate}
 (Theorems~\ref{thm:propagation} and~\ref{thm:lower}).  Closeness of
@@ -168,18 +168,15 @@ ergodic countable-state Markov multiplier satisfies A1 exactly with
 a non-log-Poisson marginal (Theorem~\ref{thm:interleaved}).
 Exchangeable multipliers with exact scaling collapse to the i.i.d.\
 log-Poisson cascade (Corollary~\ref{cor:exch}), and finite-state
-Markov multipliers cannot satisfy the real-$p$ form of A1 with
-nontrivial intermittency (Theorem~\ref{thm:finitestate}).
+Markov multipliers cannot satisfy A1 at all with nontrivial
+intermittency (Theorem~\ref{thm:finitestate}).
 
 \emph{Continuous cascades}
 (Section~\ref{sec:mrm}).  In the Bacry--Muzy category of exactly
 scale-invariant log-infinitely-divisible multifractal random
-measures, identifiability of the cascade class from
-structure-function exponents has a sharp
-finite-order boundary: \emph{four contiguous orders admit
-impersonators, five exact contiguous orders force the compound
-Poisson cascade} (Theorem~\ref{thm:window}); at the level of the
-scale-invariance
+measures, structure-function exponents exist only on a finite moment
+window, and \emph{no finite window identifies the cascade class}
+(Theorem~\ref{thm:window}); at the level of the scale-invariance
 generator---magnitude statistics, observable at all orders---A1
 selects exactly the Barral--Mandelbrot compound Poisson cascade
 (Theorem~\ref{thm:cpc}), with stability constants that are native
@@ -230,8 +227,7 @@ continuous category they transfer through the dictionary
 $\ln r \mapsto -1$.
 
 \smallskip
-Throughout this paper, $\log$ and $\ln$ both denote the natural
-logarithm.
+Throughout this paper, $\log$ denotes the natural logarithm.
 
 
 % ══════════════════════════════════════════════════════════════════════
@@ -252,9 +248,8 @@ Corollary~\ref{cor:conservation}).  Sections~\ref{sec:beyond}
 and~\ref{sec:mrm} relax, respectively, the independence assumption
 and the discrete setting.
 
-Let $\Phi(\ell)$ be the cascade observable at scale $\ell = r^n$,
-operatively $\Phi(r^n) \stackrel{d}{=} W_1\cdots W_n$ with
-$\Phi(1) = 1$.  Define the \emph{structure functions}
+Let $\Phi(\ell)$ be the cascade observable at scale $\ell = r^n$.
+Define the \emph{structure functions}
 \[
   S_p(\ell) = \langle |\Phi(\ell)|^p \rangle = \ell^{\zeta_p},
 \]
@@ -335,10 +330,10 @@ recurrence~\eqref{eq:A1} with $\beta \in (0,1)$, then with $\zeta_0
 \end{align}
 where $\gamma = \delta_\infty / k$ and $C = (\delta_0 -
 \delta_\infty)/(1 - \beta)$.
-\end{lemma}
 
 We emphasize that this lemma is purely algebraic and involves no
 probabilistic content.
+\end{lemma}
 
 \begin{proof}
 (1)~The recurrence~\eqref{eq:A1} is first-order linear with fixed
@@ -472,10 +467,7 @@ defined for $h \in [\gamma,\; \gamma + (C/k)|\ln\beta|]$.
 \textit{(i)} Immediate from Lemma~\ref{lem:exponent}.
 
 \textit{(ii)} Set $a = \gamma\ln r$, $b = (\ln\beta)/k$, $\lambda =
--C\ln r \ge 0$; here $C \ge 0$ is forced, since the moment sequence
-$m \mapsto \mathbb{E}[W^{km}]$ is log-convex and by \textup{($**$)}
-its second logarithmic difference is $C(1-\beta)^2\beta^m|\ln r|$
-($C = 0$ is the degenerate case $N \equiv 0$).  For $\log W = a + bN$ with $N \sim
+-C\ln r > 0$.  For $\log W = a + bN$ with $N \sim
 \mathrm{Poisson}(\lambda)$:
 \[
   \mathbb{E}[W^p] = e^{ap} \cdot \exp\bigl[\lambda(e^{bp} - 1)\bigr]
@@ -722,7 +714,7 @@ dominated convergence $\phi(p) \to c_0$ as $p \to \infty$; thus
 $\phi_\infty = c_0$ and $\delta_\infty = c_0/\ln r$.
 
 \textit{Step~4} ($\nu$ is a single Dirac mass).  A1 at $p = mk$
-gives, by the closed form of Lemma~\ref{lem:exponent},
+gives, by Lemma~\ref{lem:exponent}(2),
 $\delta_{mk} - \delta_\infty = (\delta_0-\delta_\infty)\beta^m$;
 multiplying by $\ln r$,
 \begin{equation}\label{eq:dagger}
@@ -842,8 +834,7 @@ c_2 p^2$ with $c_2 < 0$ (\textup{\cite{K62}}/log-normal regime),
 then $\mathbb{E}[W^p] = \exp(\mu p + \sigma^2 p^2/2)$ with $\mu =
 c_1\ln r$ and $\sigma^2 = 2c_2\ln r > 0$, and this moment sequence is
 indeterminate: uncountably many distinct laws realize it.  Under
-quadratic scaling, the lattice exponents cannot identify the
-multiplier law.
+quadratic scaling, the exponents cannot identify the multiplier law.
 \end{proposition}
 
 \begin{proof}
@@ -921,9 +912,7 @@ $A = (\delta_0 - \delta_\infty)\ln r$:
   \left(\frac{2\,|\ln r|}{|A|}\right)^{\!1/2}
   \!\sqrt{\varepsilon}\,.
 \]
-Both constants are sharp for the underlying variance bounds from
-which they arise (and attained in Wasserstein form for
-$\beta < 1/2$; see the remark below).  In
+Both constants are sharp in their respective settings.  In
 particular, the cascade multiplier distribution converges to
 log-Poisson as $\varepsilon \to 0$, at the sharp rate
 $\Theta(\sqrt\varepsilon)$
@@ -1018,28 +1007,20 @@ $W_1(\eta/\|\eta\|, \delta_\beta) = \|\eta\|^{-1}\int|u-\beta|
 \end{proof}
 
 \begin{remark}[Sharpness; a warning about per-moment transfer]
-\textup{(a)} The variance constant in reading~(i) is attained in the
-limit by
+\textup{(a)} The constant in reading~(i) is attained in the limit by
 the two-atom family $\eta = c_0\delta_{u_0} + c_1\delta_v$ with
 $u_0 \downarrow 0$, $v \in (\beta,1)$, $c_1 v(v-\beta) =
 \varepsilon|\ln r|$ and $c_0 = (\varepsilon|\ln r|/\beta)(1 + 1/v)$:
-then $\epsilon_0 \to -\varepsilon$, $\epsilon_1 \to +\varepsilon$,
+then $\epsilon_0 \to -\varepsilon$, $\epsilon_1 = +\varepsilon$,
 $|\epsilon_m| = \varepsilon v^{m-1} \le \varepsilon$ for $m \ge 2$,
-and $\int(u-\beta)^2 d\eta \to (1+\beta)|\ln r|\varepsilon$.  The
-Wasserstein constant of the theorem follows by Cauchy--Schwarz; at
-$v = 2\beta$ (feasible for $\beta < 1/2$) the family is
-Cauchy--Schwarz-tight and attains it, while for $\beta \ge 1/2$ the
-Wasserstein form need not be attained.
+and $\int(u-\beta)^2 d\eta \to (1+\beta)|\ln r|\varepsilon$.
 
-\textup{(b)} The variance constant in reading~(ii) is likewise
-attained:
+\textup{(b)} The constant in reading~(ii) is likewise attained:
 choose moment residuals $(\epsilon_0, \epsilon_1) \to (0,
 2\varepsilon)$ realized by two atoms (one near $0$, one in
 $(\beta,1)$) and the offset $t \to \varepsilon$; all hypothesis
 residuals $h_m = \epsilon_m - t$ then stay below $\varepsilon$ in
-absolute value.  At $v = 2\beta$ (again feasible for $\beta < 1/2$)
-this family is likewise Cauchy--Schwarz-tight and attains the
-Wasserstein constant of reading~(ii).  For $\beta < \sqrt2 - 1$ one has $2 >
+absolute value.  For $\beta < \sqrt2 - 1$ one has $2 >
 (1+\beta)^2$: the distinction between the two readings is
 quantitatively real, and a constant valid in reading~(i)---even the
 non-sharp $(1+\beta)^2$---can \emph{fail} outright in reading~(ii).
@@ -1087,8 +1068,8 @@ process $\{U_i\}$ of intensity $\tilde\nu$,
 \[
   W = e^{a_\varepsilon}\prod_i U_i^{1/k},
   \quad
-  \sum_i\bigl(1 - U_i^{1/k}\bigr) \le 2\sum_i(1-U_i)
-  \ \text{ of finite mean } 2\|\eta\|
+  \sum_i\bigl(1 - U_i^{1/k}\bigr) \le \tfrac2k\sum_i(1-U_i)
+  \ \text{ of finite mean } \tfrac2k\|\eta\|
 \]
 (Campbell's formula \cite{Kin93}).  Under $\mathbb{E}[W]=1$ the
 drift is $a_\varepsilon = \int(1-u^{1/k})\,d\tilde\nu < \infty$.
@@ -1115,12 +1096,8 @@ One admissible (not optimized) choice is
   L_k &= \tfrac1k\bigl(\tfrac\beta2\bigr)^{(1-k)/k},
 \end{aligned}
 \]
-with the $O(\varepsilon)$ remainders absorbed for $\varepsilon \le
-\varepsilon_0$; at $k = 1$ the formalization verifies the sharper
-constant with $e^{a_0}$ in place of $e^{a_0+1}$, under the explicit
-threshold $\varepsilon_0 = \|\eta\|/(4(1+\beta)|\ln r|)$ (the
-formalization's residual is measured at the L\'evy--Khintchine scale
-$|\ln r|\,\varepsilon$).
+absorbing $O(\varepsilon)$ terms via $\varepsilon \le
+\sqrt\varepsilon$.
 \end{theorem}
 
 \begin{proof}
@@ -1226,9 +1203,9 @@ multipliers are bounded by $e^{a_\cdot}$
   \text{Step 3}\bigr].
 \end{aligned}
 \]
-Substituting the three displays yields the stated $K_\infty$ up to
-$O(\varepsilon)$ remainders, which are absorbed for $\varepsilon
-\le \varepsilon_0$ as in the statement.
+Substituting the three displays and absorbing every
+$O(\varepsilon)$ term via $\varepsilon \le \sqrt\varepsilon$ yields
+the stated $K_\infty$.
 \end{proof}
 
 \begin{remark}[Why no hypotheses are needed]
@@ -1265,10 +1242,10 @@ c_2(\beta)\,\dfrac{|A|}{|\ln r|}\,d^2$, where $c_2(\beta) =
 \vee 1$;
 
 \textup{(ii)} with $\lambda_d = \|\tilde\nu_d\| =
-\lambda/(1 - d^2(1-\beta)^{-2})$,
+\lambda/(1 - d^2(1-\beta)^{-2})$ and $a = |A|$,
 \[
   W_1\bigl(\mathrm{law}\,W_{(d)},\ \mathrm{law}\,W_0\bigr)
-  \;\ge\; \lambda_d\,e^{-\lambda_d}\,e^{|A|}\,d
+  \;\ge\; \lambda_d\,e^{-\lambda_d}\,e^{a}\,d
   \;\ge\; c_1(\beta, C, r)\,\sqrt{\varepsilon(d)}\,.
 \]
 Hence no propagation bound of order $o(\sqrt\varepsilon)$ is
@@ -1295,26 +1272,26 @@ the upper bound, the mean value theorem gives $(\beta+d)^m -
 $a_{(d)} = \int(1-u)\,d\tilde\nu_d = \|\eta_d\| = |A|$, identical to
 $a_0 = \lambda(1-\beta) = |A|$: the family is \emph{drift-rigid}.
 The support of $\mathrm{law}(W_0)$ is the geometric set $G =
-\{e^{a_0}\beta^j : j \ge 0\}$.  Take the 1-Lipschitz test function
+\{e^{a}\beta^j : j \ge 0\}$.  Take the 1-Lipschitz test function
 \[
   f(w) := \min\Bigl(\dist\bigl(w,\,G\bigr),\
-  \tfrac{e^{a_0}\beta(1-\beta)}{2}\Bigr) \;\ge\; 0,
+  \tfrac{e^a\beta(1-\beta)}{2}\Bigr) \;\ge\; 0,
 \]
 which vanishes on $G$, so $\mathbb{E}f(W_0) = 0$.  On the one-jump
 event of $W_{(d)}$ (probability $\lambda_d e^{-\lambda_d}$),
-$W_{(d)} = e^{a_0}(\beta\pm d)$, whose distance to the nearest point
-of $G$ is exactly $e^{a_0} d$ for $d < \beta(1-\beta)/2$ (the
-neighbors $e^{a_0}$ and $e^{a_0}\beta^2$ are farther, and $e^{a_0}d$ is
-below the cap); all other events contribute $\ge 0$.  By
+$W_{(d)} = e^{a}(\beta\pm d)$, whose distance to the nearest point
+of $G$ is exactly $e^a d$ for $d < \beta(1-\beta)/2$ (the
+neighbors $e^a$ and $e^a\beta^2$ are farther, and $e^ad$ is below
+the cap); all other events contribute $\ge 0$.  By
 Kantorovich--Rubinstein duality \cite{Vil09},
 \[
   W_1 \;\ge\; \mathbb{E}f(W_{(d)}) - \mathbb{E}f(W_0)
-  \;\ge\; \lambda_d e^{-\lambda_d}\,e^{a_0}\,d,
+  \;\ge\; \lambda_d e^{-\lambda_d}\,e^{a}\,d,
 \]
 and substituting $d \ge \bigl(|\ln r|\,\varepsilon(d) / (c_2(\beta)
 |A|)\bigr)^{1/2}$ from~(i) gives the $c_1\sqrt{\varepsilon}$ form.
 (The same construction works for $k > 1$ on the lattice
-$\{e^{a_0}\beta^{j/k}\}$; $k = 1$ is stated for cleanliness.)
+$\{e^{a}\beta^{j/k}\}$; $k = 1$ is stated for cleanliness.)
 \end{proof}
 
 \begin{remark}[The stability theory is elementary and now
@@ -1365,13 +1342,10 @@ of Theorem~\ref{thm:characterization}.
 Under \textup{(S)}, A1 holds on the lattice if and only if
 $\Lambda = \Lambda_{\mathrm{LP}}$ on the lattice.  Consequently,
 under A1 every observable computed from lattice exponents---%
-structure-function exponents and moment ratios---coincides exactly
-with that of the i.i.d.\ log-Poisson cascade with parameters
-$(\beta, \gamma, C)$; and whenever $\Lambda = \Lambda_{\mathrm{LP}}$
-holds on all of $[0,\infty)$ (as in the construction of
-Theorem~\ref{thm:interleaved}), the large-deviation rate function
-and multifractal spectrum coincide as well (see the remark below;
-lattice A1 alone pins $\Lambda$ off-lattice only up to convexity).
+structure-function exponents, moment ratios, and (under the
+regularity below) the large-deviation rate function and multifractal
+spectrum---coincides exactly with that of the i.i.d.\ log-Poisson
+cascade with parameters $(\beta, \gamma, C)$.
 \end{theorem}
 
 \begin{proof}
@@ -1399,9 +1373,7 @@ There exists a stationary ergodic multiplier sequence
 $(W_n)$---realizable as a function of a stationary, irreducible,
 positive-recurrent countable-state Markov chain---such that:
 
-\textup{(i)} $m_n(p) = r^{n\zeta^{\mathrm{LP}}_p}$ \emph{exactly},
-where $\zeta^{\mathrm{LP}}_p := \gamma p + C(1-\beta^{p/k})$ is the
-log-Poisson exponent curve, for
+\textup{(i)} $m_n(p) = r^{n\zeta^{\mathrm{LP}}_p}$ \emph{exactly} for
 every even $n$ and every real $p \ge 0$; hence \textup{(S)} holds,
 $\Lambda = \Lambda_{\mathrm{LP}}$ on all of $[0,\infty)$, and A1
 holds exactly, in its strongest (real-$p$) form;
@@ -1430,9 +1402,9 @@ slots of doubled intensity alternate with deterministic slots.
 
 \textit{Stationarity and Markov realization.}  The pair $Z_n :=
 ((n+\theta)\bmod 2,\, X_n)$ is a Markov chain on
-$\{0,1\}\times(a+b\mathbb{N}_0)$: from phase-0 states the next value
+$\{0,1\}\times(a+b\mathbb{N}_0)$: from phase-1 states the next value
 is $a + bA$ with fresh $A \sim \mathrm{Poisson}(\lambda')$ and the
-phase flips; from phase-1 states the next value is $a$ and the phase
+phase flips; from phase-0 states the next value is $a$ and the phase
 flips.  The chain is irreducible on its reachable set and positive
 recurrent; the phase-uniform stationary law makes $(Z_n)$
 stationary and $W_n$ a function of it.
@@ -1466,13 +1438,7 @@ Theorem~\ref{thm:cgflevel} then gives A1 exactly.
 marginal has $\mathbb{P}(X = a) = e^{-\lambda}$; for She--L\'ev\^eque
 dissipation parameters ($\lambda = 2\ln2$): $0.531$ versus $0.250$.
 The marginal is the mixture $\tfrac12\delta_a +
-\tfrac12\,\mathrm{law}(a + b\,\mathrm{Poisson}(2\lambda))$.  No
-choice of parameters repairs this: a log-Poisson marginal charges
-every point of its lattice $a' + b'\mathbb{N}_0$, so support
-comparison forces $(a', b') = (a, b)$; the atom-mass ratios at
-depths $j \ge 1$ are those of $\mathrm{Poisson}(2\lambda)$, forcing
-$\lambda' = 2\lambda$, whose top-atom mass $e^{-2\lambda}$ lies
-strictly below the mixture's $\tfrac12(1 + e^{-2\lambda})$.
+\tfrac12\,\mathrm{law}(a + b\,\mathrm{Poisson}(2\lambda))$.
 
 \textit{Non-i.i.d.}  Given $X_n \ne a$ the next multiplier is
 deterministic: $\mathbb{P}(X_{n+1} = a \mid X_n \ne a) = 1 \ne
@@ -1515,8 +1481,7 @@ Theorem~\ref{thm:characterization}(ii); the mixture is degenerate.
 \begin{theorem}[Finite-state impossibility]\label{thm:finitestate}
 Let $\xi$ be an irreducible finite-state Markov chain, stationary,
 and $W_n = e^{f(\xi_n)}$ with $f$ non-constant.  Then the cascade
-cannot satisfy A1 in its real-$p$ form---the closed form
-\textup{($**$)} valid for all real $p \ge 0$---with nontrivial
+cannot satisfy A1 in its real-$p$ form with nontrivial
 intermittency: there are no parameters $(\beta, \gamma, C)$ with
 $C > 0$ and $\zeta_p = \gamma p + C(1-\beta^{p/k})$ for all real
 $p \ge 0$.
@@ -1601,17 +1566,11 @@ From (M1), wherever $\mathbb{E}[M([0,t])^q] < \infty$,
   \zeta_q = q - \psi(q),
 \]
 and moments of the total mass are finite (for $q > 1$) precisely on
-the window where $\zeta_q > 1$ \cite{BM03}.  Which orders are
-usable thus depends on the generator: when $\zeta_q$ eventually
-decreases (log-normal, log-stable) only a finite window $[0, q^*)$
-of finite moments exists, whereas the She--L\'ev\^eque curve itself
-is strictly increasing under \textup{(M2)} whenever $\gamma \ge 0$
-(at She--L\'ev\^eque values $\gamma = 1/3$), so every moment of the
-compound Poisson cascade is finite.  The operative limit on
-structure-function data is statistical: high-order sample moments
-are noise-dominated, and in practice exponents are trusted only on
-a short initial window, typically $q \lesssim 3$.  The hierarchical
-symmetry A1 is imposed on
+the window where $\zeta_q > 1$ \cite{BM03}.  Since $\zeta$ is
+concave with $\zeta_1 = 1$, \emph{structure functions see only a
+finite window $[0, q^*)$}---a hard information barrier with no
+discrete counterpart (there the log-Poisson multiplier is bounded
+and all moments exist).  The hierarchical symmetry A1 is imposed on
 $\delta_q = \zeta_{q+k} - \zeta_q$ as before.
 
 The dictionary to the discrete theory is one line: with $\phi_c(q)
@@ -1627,178 +1586,62 @@ formally the discrete identities with $\ln r \mapsto -1$, so $|A_c|
 $C$ \emph{per unit log-scale}.  Every $|\ln r|$ in the discrete
 constants disappears.
 
-\begin{theorem}[Four orders do not identify the class; five
-contiguous orders do]\label{thm:window}
+\begin{theorem}[No finite moment window identifies the
+class]\label{thm:window}
 Fix the She--L\'ev\^eque exponent curve $\zeta^{\mathrm{SL}}_q =
-\gamma q + C(1-\beta^{q/k})$, $\beta \in (0,1)$, $C > 0$,
-normalized by \textup{(M2)}.
-\begin{itemize}
-\item[\textup{(i)}] \textup{(Impersonation up to four orders.)}
-  Assume additionally $\gamma \ge 0$, as at She--L\'ev\^eque values,
-  so that the matched curve keeps the measures nondegenerate (every
-  impersonator below matches $\zeta_{2k} = \zeta^{\mathrm{SL}}_{2k} > 1$).
-  For every lattice window $F \subseteq \{0, k, 2k, 3k\}$ there is
-  a continuum of exactly scale-invariant log-ID multifractal random
-  measures whose generators are not compound Poisson with a single
-  atom---in particular are not the compound Poisson cascade---yet
-  whose exponents satisfy $\zeta_q = \zeta^{\mathrm{SL}}_q$ for
-  every $q \in F$.  Moreover every impersonator of the full window
-  $\{0,k,2k,3k\}$ is strictly \emph{more} intermittent at the next
-  order: $\zeta_{4k} < \zeta^{\mathrm{SL}}_{4k}$, with
-  $\zeta^{\mathrm{SL}}_{4k} - \zeta_{4k} \le C\beta(1-\beta)^3$
-  for generators without amplifying jumps.
-\item[\textup{(ii)}] \textup{(Five-point rigidity.)}  Let $M$
-  satisfy \textup{(M1)}, \textup{(M2)} with generator triplet
-  $(\tilde a, \sigma_0^2, \Pi)$ and L\'evy exponent $\psi$ finite
-  on $[0, 4k]$ (weaker than \textup{(S$_c$)}).  If $\zeta_q =
-  \zeta^{\mathrm{SL}}_q$ at the five contiguous points $q \in
-  \{0, k, 2k, 3k, 4k\}$---in particular on any window $F \supseteq
-  \{0, k, 2k, 3k, 4k\}$---then $\sigma_0^2 = 0$ and $\Pi = C\delta_b$
-  with $b = (\ln\beta)/k$: $M$ \emph{is} the compound Poisson
-  cascade.  No impersonator exists.
-\end{itemize}
-Structure-function data on the practically accessible window
-(typically $q \lesssim 3$: part \textup{(i)}) cannot certify the
-log-Poisson class; five
-exact contiguous exponent values (part \textup{(ii)}) can.
+\gamma q + C(1-\beta^{q/k})$ normalized by \textup{(M2)}, and any
+finite lattice window $F \subset k\mathbb{N}_0$.  Then there is a
+continuum of exactly scale-invariant log-ID multifractal random
+measures whose generators are not compound Poisson with a single
+atom---in particular are not the compound Poisson cascade---yet
+whose exponents satisfy $\zeta_q = \zeta^{\mathrm{SL}}_q$ for every
+$q \in F$.  Structure-function data on a finite moment window, even
+exact and noise-free, cannot certify the log-Poisson class.
 \end{theorem}
 
 \begin{proof}
-Throughout take $k = 1$ (general $k$ is identical after $u =
-e^{kx}$) and work in the tilted coordinates $u = e^{x}$, in which
+We give the construction for $k = 1$ and the physically typical
+window $F = \{0,1,2\}$ (i.e.\ $2 < q^* \le 3$); larger windows are
+identical with more atoms.  In the tilted coordinates $u = e^{x}$,
 the CPC generator (Theorem~\ref{thm:cpc}) has $\tilde\Pi = C
-\delta_\beta$.  The key object is the \emph{squared-tilt} measure
-\[
-  \rho \;:=\; (u-1)^2\,d\tilde\Pi \;\ge\; 0
-  \qquad\text{on } (0,\infty)\setminus\{1\},
-  \qquad r_q := \int u^q\,d\rho ;
-\]
-because $(u-1)^2$ is a square, $\rho$ is nonnegative on \emph{both}
-sides of $u = 1$.  Finiteness of $r_0, r_1, r_2$ follows from
-$\psi(4) < \infty$: near $x = 0$ the integrand is $\asymp x^2 u^q$
-(L\'evy integrability); on $x \le -1$ it is bounded; on $x \ge 1$
-it is $\le e^{(q+2)x}$ with $q + 2 \le 4$.  Taking the step-one
-second difference of the L\'evy--Khintchine formula, the drift and
-compensator terms cancel exactly, the Gaussian term contributes
-$\sigma_0^2$, and $e^{(m+2)x} - 2e^{(m+1)x} + e^{mx} =
-e^{mx}(e^{x}-1)^2$, so
-\begin{equation}\label{eq:seconddiff}
-  \Delta^2\psi(m) \;=\; \psi(m+2) - 2\psi(m+1) + \psi(m)
-  \;=\; \sigma_0^2 + r_m ,
-\end{equation}
-while on the She--L\'ev\^eque side $\Delta^2\psi^{\mathrm{SL}}(m) =
-C\beta^m(1-\beta)^2 =: A'\beta^m$.
-
-\smallskip
-\textit{(ii), five-point rigidity.}  Matching $\zeta$ (hence
-$\psi$) at the five contiguous points $\{0,1,2,3,4\}$ matches the
-three second differences $m = 0, 1, 2$ of~\eqref{eq:seconddiff}:
-$\sigma_0^2 + r_m = A'\beta^m$.  Test against the square
-$(u-\beta)^2$:
-\[
-\begin{aligned}
-  0 \;\le\; \int (u-\beta)^2\,d\rho
-  &\;=\; r_2 - 2\beta r_1 + \beta^2 r_0 \\
-  &\;=\; A'(\beta^2 - 2\beta^2 + \beta^2)
-        - \sigma_0^2(1 - 2\beta + \beta^2) \\
-  &\;=\; -\sigma_0^2(1-\beta)^2 \;\le\; 0 .
-\end{aligned}
-\]
-Hence $\sigma_0^2 = 0$ and $\int(u-\beta)^2\,d\rho = 0$, so $\rho$
-vanishes off $\{\beta\}$ and $\rho = r_0\delta_\beta =
-A'\delta_\beta$.  Inverting the tilt ($(u-1)^2 > 0$ off $u = 1$,
-and $\tilde\Pi(\{1\}) = \Pi(\{0\}) = 0$ by the L\'evy convention)
-gives $\tilde\Pi = A'(1-\beta)^{-2}\delta_\beta = C\delta_\beta$,
-i.e.\ $\Pi = C\delta_b$; (M2) pins $\tilde a$ and $\psi \equiv
-\psi^{\mathrm{SL}}$.  The identification with the
-Barral--Mandelbrot cascade is \cite{BM03}.  Note no divergence
-argument and no moments beyond $q = 4$ are used: the squared tilt
-is sign-definite across $u = 1$, so amplifying jumps ($u > 1$) and
-the Gaussian component die on the finite window.
-
-\smallskip
-\textit{(i), construction at four orders.}  For the physically
-typical window $F = \{0,1,2\}$ perturb the CPC:
+\delta_\beta$.  Perturb:
 \[
   \tilde\Pi_s = (C - sc)\,\delta_\beta + s\,(w_1\delta_{v_1} +
   w_2\delta_{v_2}),
   \qquad 0 < v_1 < \beta < v_2 < 1,
 \]
 with the drift re-fixed by (M2) for each $s$, and impose
-$\sum_{i} w_i(v_i^m - 1) = c(\beta^m - 1)$ for $m = 1, 2$: the
-$m=1$ equation makes the (M2)-drifts coincide, the $m=2$ equation
-matches $\zeta_2$, and $\zeta_0 = 0$, $\zeta_1 = 1$ are automatic.
-At $(\beta, v_1, v_2) = (2/3,\,0.3,\,0.9)$, $c = 1$, the $2\times2$
-system gives $w_1 = 5/27 \approx 0.1852$, $w_2 = 55/27 \approx
-2.0370$, both \emph{positive}, so $\tilde\Pi_s \ge 0$ for all $s
-\in [0, C/c]$: a one-parameter family of genuine L\'evy measures,
-none a single atom for $s > 0$, all matching $\zeta^{\mathrm{SL}}$
-exactly on $F$ (and differing beyond: at $m = 3$ the perturbed
-exponent differs by $+77/5400 \approx +0.0143$ at $s = \tfrac12$).
-
-This two-sided ansatz, however, does \emph{not} extend past $F =
-\{0,1,2\}$: if $\mu^+ = \sum_i w_i\delta_{v_i} \ge 0$ with $v_i \in
-(0,1)$ satisfies the constraints for $m = 1, 2, 3$, then with
-$d\sigma := (1-u)\,d\mu^+ \ge 0$ and $1 - u^m =
-(1-u)(1 + u + \cdots + u^{m-1})$ the constraints give $s_j := \int
-u^j d\sigma = c(1-\beta)\beta^j$ for $j = 0, 1, 2$, whence
-$\int(u-\beta)^2 d\sigma = 0$ and $\mu^+ = c\,\delta_\beta$: the
-perturbation collapses to the CPC atom.  The maximal window
-$\{0,1,2,3\}$ is reached instead by a one-sided construction in
-$\rho$-space: solve $r_0 = A'$, $r_1 = A'\beta$ with two atoms,
-e.g.\ $\rho = w_1\delta_{0.4} + w_2\delta_{0.95}$, $(w_1, w_2) =
-(0.114478,\,0.107744)$ at $(\beta, C) = (2/3, 2)$, i.e.\
-$\tilde\Pi = \rho/(1-u)^2 = 0.31799\,\delta_{0.4} +
-43.0976\,\delta_{0.95}$ with (M2)-drift $\tilde a = 2.345679$.
-By~\eqref{eq:seconddiff} this matches $\zeta^{\mathrm{SL}}$ at $q =
-0, 1, 2, 3$ exactly (with $\zeta_2 = \tfrac{16}{9} > 1$: a
-nondegenerate multifractal measure), is not single-atom compound
-Poisson, and deviates at $q = 4$ by $-(r_2 - A'\beta^2) = -0.01679$.
-Varying the atom positions $0 < v_1 < \beta < v_2 < 1$ solves the
-same two constraints with strictly positive weights $w_1 =
-A'(v_2-\beta)/(v_2-v_1)$, $w_2 = A'(\beta-v_1)/(v_2-v_1)$, giving a
-two-parameter continuum of impersonators of the full window.
-
-\smallskip
-\textit{(i), one-sidedness at the next order.}  For \emph{any}
-generator matching $\zeta^{\mathrm{SL}}$ on $\{0,1,2,3\}$,
-\eqref{eq:seconddiff} at $m = 0, 1$ gives $\sigma_0^2 + r_0 = A'$
-and $\sigma_0^2 + r_1 = A'\beta$, and
 \[
-  \zeta_{4} - \zeta^{\mathrm{SL}}_{4}
-  = -\bigl(\sigma_0^2 + r_2 - A'\beta^2\bigr) .
+  \sum_{i=1,2} w_i\,(v_i^m - 1) \;=\; c\,(\beta^m - 1),
+  \qquad m = 1, 2 .
 \]
-Cauchy--Schwarz $r_1^2 \le r_0 r_2$ forces $\sigma_0^2 + r_2 \ge
-A'\beta^2$, with equality iff $\sigma_0^2 = 0$ and $\rho =
-A'\delta_\beta$---i.e.\ iff the generator is the CPC itself.  Hence
-every genuine impersonator strictly undershoots at $q = 4$; for
-attenuation-only generators (no atoms $u > 1$) the deficit is at
-most $A'\beta(1-\beta) = C\beta(1-\beta)^3$
-($= 4/81 \approx 0.049$ at She--L\'ev\^eque values), while
-amplifying atoms make it unbounded as $u_{\max} \to \infty$.
+The $m=1$ equation makes the (M2)-drifts of $\tilde\Pi_s$ and
+$\tilde\Pi_0$ coincide; the $m=2$ equation then matches $\zeta_2$;
+$\zeta_0 = 0$ and $\zeta_1 = 1$ are automatic.  At $(\beta, v_1,
+v_2) = (2/3,\,0.3,\,0.9)$, $c = 1$, the $2\times2$ system gives
+$w_1 = 0.1852$, $w_2 = 2.0370$, both \emph{positive}, so
+$\tilde\Pi_s \ge 0$ for all $s \in [0, C/c]$: a one-parameter family
+of genuine L\'evy measures, none a single atom for $s > 0$, all
+matching $\zeta^{\mathrm{SL}}$ exactly on $F$ (and differing beyond:
+at $m = 3$ the perturbed exponent differs by $+0.0143$ at
+$s = \tfrac12$).  For general finite $F$, the same ansatz with more
+atoms imposes finitely many linear constraints on infinitely many
+degrees of freedom, with positivity maintained by anchoring the
+negative part on the CPC atom.
 \end{proof}
 
 \begin{remark}
-The divergence steps of Theorem~\ref{thm:classification} need $q
-\to \infty$, and on a three-point window even $\sigma_0^2 > 0$
+Theorem~\ref{thm:window} does not contradict the discrete
+classification: there A1 was available at \emph{all} lattice
+orders---the divergence steps of Theorem~\ref{thm:classification}
+need $q \to \infty$, and on a finite window even $\sigma_0^2 > 0$
 survives (a quadratic log-normal exponent interpolates any
-three-point window with the correct convexity)---but the
-obstruction stops there.  The squared tilt $\rho = (u-1)^2
-d\tilde\Pi$ of part~(ii) is sign-definite across $u = 1$, so the
-Gaussian component and amplifying jumps die on a finite window with
-no divergence bookkeeping: identifiability does \emph{not} require
-constraints of unbounded order---five exact contiguous orders
-suffice.  (Version~2 of this paper asserted the contrary; part~(ii)
-corrects it.)  What structure
-functions cannot supply in practice is exactness at five orders
-inside the statistically accessible window, typically $q \lesssim
-3$: the
-barrier to certification by structure functions is statistical, not
-one of principle.  The scale-invariance factor $\Omega_\sigma$
-remains the robust observable: under \textup{(S$_c$)} it has all
-exponential moments, at every $\sigma$, and its statistics
-(``magnitude'' statistics, in the language of \cite{DMA01}) are
-observable at all orders.
+three-point window with the correct convexity).  Identifiability
+requires constraints of unbounded order, which structure functions
+cannot supply.  The scale-invariance factor $\Omega_\sigma$ can:
+under \textup{(S$_c$)} it has all exponential moments, at every
+$\sigma$, and its statistics (``magnitude'' statistics, in the
+language of \cite{DMA01}) are observable at all orders.
 \end{remark}
 
 \begin{theorem}[Generator-level classification: A1 selects the
@@ -1848,15 +1691,6 @@ $\tilde\Pi = \frac{|A_c|}{1-\beta}\delta_\beta = C\delta_\beta$ and
 $\Pi = C\delta_b$.  The identification of the compound-Poisson
 member of the Bacry--Muzy class with the Barral--Mandelbrot cascade
 is \cite{BM03}.
-
-Alternatively, and with weaker hypotheses, the forward direction is
-a corollary of Theorem~\ref{thm:window}(ii): A1 on the full lattice
-gives the closed form $\zeta_q = \zeta^{\mathrm{SL}}_q$ on
-$\{0, k, 2k, 3k, 4k\}$ (Lemma~\ref{lem:exponent} under the
-dictionary),
-and five-point rigidity forces the CPC---using only $\psi$ finite
-on $[0,4k]$ rather than \textup{(S$_c$)}, and none of the
-divergence steps.
 \end{proof}
 
 \begin{corollary}[Stability with native constants]\label{cor:mrmstab}
@@ -1890,26 +1724,18 @@ argument of Section~\ref{sec:propagation}.
 
 \begin{remark}[What the two theorems mean together]
 Theorems~\ref{thm:window} and~\ref{thm:cpc} are two halves of one
-statement about observability: on the practically accessible
-window (typically $q \lesssim 3$) structure functions cannot
-identify the
-cascade class, while five exact contiguous orders---or, at the
-generator level, magnitude statistics at three lattice
-orders---classify it completely, with quantitative stability.  This
-places a theorem under the long-standing practical preference for
-magnitude-cumulant analysis over high-order structure functions
-\cite{DMA01}, now as a statement about statistics rather than
-principle: the structure-function route fails not because
-finite-order data can never certify the class, but because
-exactness at the five orders it would need is beyond finite-sample
-resolution.  Note also that the continuous category
-is \emph{more} rigid than the discrete one: infinite divisibility,
-an assumption in Theorem~\ref{thm:classification}, is automatic
-here (consistency of $\Omega_{\sigma\sigma'} \stackrel{d}{=}
-\Omega_\sigma + \Omega'_{\sigma'}$), so the classification needs no
-distributional hypothesis beyond membership in the class---and by
-Theorem~\ref{thm:window}(ii) it needs only five lattice moments,
-with no divergence bookkeeping.  Finally, the
+statement about observability: structure functions cannot identify
+the cascade class even in principle (a finiteness barrier, not a
+statistical one), while magnitude statistics classify it completely,
+with quantitative stability.  This places a theorem under the
+long-standing practical preference for magnitude-cumulant analysis
+over high-order structure functions \cite{DMA01}.  Note also that
+the continuous category is \emph{more} rigid than the discrete one:
+infinite divisibility, an assumption in
+Theorem~\ref{thm:classification}, is automatic here (consistency of
+$\Omega_{\sigma\sigma'} \stackrel{d}{=} \Omega_\sigma +
+\Omega'_{\sigma'}$), so the classification needs no distributional
+hypothesis beyond membership in the class.  Finally, the
 most-singular-branch geometry (Corollary~\ref{cor:branch}) reads
 natively: the probability that the cone above a point carries no
 Poisson point down to scale $\ell$ is $\ell^{\,C}$---codimension
@@ -1933,9 +1759,7 @@ This reduces the observable parameters from two to one.
 
 \begin{corollary}[Codimension identification]\label{cor:codimension}
 If the most singular structures have Hausdorff codimension
-$C_{\mathrm{geom}}$ and $C = C_{\mathrm{geom}}$, then, together
-with the conservation constraint of
-Corollary~\ref{cor:conservation}, $\beta$
+$C_{\mathrm{geom}}$ and $C = C_{\mathrm{geom}}$, then $\beta$
 alone determines the full exponent curve, the multifractal spectrum,
 and the cascade distribution.
 \end{corollary}
@@ -1985,9 +1809,8 @@ with sharp stability constants and the exact propagation rate
 $\Theta(\sqrt\varepsilon)$; beyond independence it pins all
 asymptotic statistics (and provably nothing more); and in the
 continuous category it selects exactly the compound Poisson
-cascade at the generator level, while structure functions can do so
-only from five exact contiguous moment orders---beyond the window
-accessible in practice.  The following directions remain
+cascade at the generator level, while no finite moment window of
+structure functions can do so.  The following directions remain
 open.
 
 \begin{enumerate}
@@ -2018,111 +1841,9 @@ open.
   Theorem~\ref{thm:stability} and Corollary~\ref{cor:mrmstab} as the
   operative null band---is the missing link between the
   classification and data; the window obstruction of
-  Theorem~\ref{thm:window}(i) dictates that such a theory be built
-  on magnitude statistics rather than high-order structure
-  functions.  (By Theorem~\ref{thm:window}(ii) this is a dictate of
-  statistics, not principle: five exact contiguous orders would
-  suffice, but exactness at five orders is precisely what finite
-  noisy data cannot supply.)  Sparse lattice windows---neither
-  contained in $\{0, k, 2k, 3k\}$ nor containing
-  $\{0, k, 2k, 3k, 4k\}$---are not settled by
-  Theorem~\ref{thm:window} and remain open.
+  Theorem~\ref{thm:window} dictates that such a theory be built on
+  magnitude statistics rather than high-order structure functions.
 \end{enumerate}
-
-% ══════════════════════════════════════════════════════════════════════
-\section*{Appendix A. Formalization status}
-% Allow line breaks after underscores in long Lean identifiers, and give
-% the paragraph builder extra stretch; applies to the appendix onward.
-\renewcommand{\_}{\textunderscore\allowbreak}
-\emergencystretch=2em
-% ══════════════════════════════════════════════════════════════════════
-
-The mathematical core of this paper is formalized and kernel-checked in
-Lean~4 with Mathlib (repository directory \texttt{formalization/},
-sixteen modules): \textbf{zero \texttt{sorry}, zero custom axioms} --- every
-compiled constant depends only on Lean's three standard axioms
-(\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}),
-enforced by a whole-library environment walk
-(\texttt{AxiomAudit.lean}) that fails on any violation and thereby also
-soundly excludes every escape hatch (\texttt{sorry} introduces the
-axiom \texttt{sorryAx}).  Toolchain and Mathlib revision are pinned;
-\texttt{./check.sh} reproduces the full gate, and
-\texttt{Freeburg/Main.lean} is a compile-checked manifest of the
-principal claims (it fails to build if any is renamed or removed).
-
-\emph{Machine-checked} (Lean names in the repository's mapping tables):
-Lemma~1, with the lattice-level skeleton of Corollary~6
-(\texttt{satisfiesA1\_iff\_closed\_form});
-Proposition~5 (\texttt{logPoisson\_satisfies\_A1}); Lemma~2
-(\texttt{lemma2\_boundedness}, \texttt{ext\_of\_lattice\_moments\_eq});
-Theorem~3(ii) at the level of laws
-(\texttt{theorem3\_law\_uniqueness\_W}); Theorem~7, forward
-(\texttt{theorem7\_forward\_nu}); Theorem~10 under both readings with
-both sharp constants attained exactly
-(\texttt{theorem10\_variance\_known/\_fitted},
-\texttt{variance\_le\_sharp}, \texttt{fitted\_variance\_le\_sharp},
-Wasserstein form \texttt{theorem10\_wasserstein\_W1}); Theorem~11,
-unconditional (\texttt{theorem11\_rate\_upper}); Theorem~12
-(\texttt{theorem12\_rate\_lower}); the $\Theta(\sqrt\varepsilon)$
-bracket (\texttt{theorem11\_12\_theta}); and, in this version,
-Theorem~17 in both parts --- five-point rigidity
-(\texttt{theorem17\_five\_point\_rigidity}), one-sidedness with its
-equality case and deficit budget (\texttt{theorem17\_one\_sided},
-\texttt{theorem17\_one\_sided\_budget}), and the exact-rational
-impersonators including the injective three-atom continuum
-(\texttt{theorem17\_impersonation\_three\_point}, \texttt{nu3\_injOn},
-\texttt{theorem17\_impersonation\_four\_point}) --- together with
-Theorem~18's forward direction by the five-moment route under
-hypotheses weaker than (S$_c$)
-(\texttt{theorem18\_forward\_fiveMoment}).  Section~6 is checked in
-scoped form: Theorem~13 in full
-(\texttt{theorem13\_asymptotic\_classification}); Theorem~14's
-quantitative core---exact even-block log-Poisson moments and the
-strict marginal mismatch $\tfrac12(1+e^{-2\lambda}) > e^{-\lambda}$
-(\texttt{theorem14\_even\_block\_moments},
-\texttt{theorem14\_marginal\_ne\_logPoisson}); Corollary~15 in
-conditional form---the de~Finetti directing kernel as hypothesis,
-after which variance-vanishing and pointwise determinacy are fully
-checked (\texttt{corollary15\_conditional}); and Theorem~16's
-growth-contradiction core (\texttt{theorem16\_scoped}).
-Corollaries~19--23 are checked
-(\texttt{corollary20\_conservation} through
-\texttt{corollary23\_native\_stability}, the latter carrying
-Corollaries~19 and~23 as a single statement, with the spectrum width
-of Corollary~22 obtained from a kernel-checked derivative).
-
-\emph{Strengthenings found by formalization} (each documented in the
-repository): the converse needs no $\lambda > 0$; the Dirac rigidity is
-uniform in $\beta$ and needs no sign hypothesis on the intensity
-($C \ge 0$ is a conclusion); the variance-level sharp constants are
-attained exactly on
-the closed interval, not only in the limit; Theorem~12(ii) holds for
-every target rate and drift; Theorem~11's constant improves at $k = 1$
-and never consumes conservation; the one-sided deficit budget needs no
-$\sigma^2 \ge 0$.  The formalization also caught one sign typo
-(Theorem~12's parenthetical, fixed before submission of v2).
-
-\emph{Still informal, and why:} the classical inputs that the
-formalized statements deliberately take as hypotheses rather than
-re-prove, pending Mathlib infrastructure: the L\'evy--Khintchine
-representation theorem (the log-ID class is formalized \emph{by
-triplet}, exactly as Theorems~7, 10, 17 and 18 state their
-hypotheses); de~Finetti's theorem (Corollary~15's directing kernel);
-Perron--Frobenius simplicity with analytic perturbation and the
-identity theorem (Theorem~16's extension of $\Lambda$ to $\mathbb R$);
-the Bacry--Muzy construction of the exactly scale-invariant measure
-for a given generator (\S7 results are stated at the generator level,
-as their printed proofs argue); and Theorem~14's stationary-ergodic
-sequence-space realization together with the G\"artner--Ellis remark
-(its block-level moments and marginal mismatch are checked).  Minor
-items riding on these bridges (Theorem~3(iii), Corollaries~4 and~8,
-Proposition~9(b)) and the sparse-window question remain informal.
-One definitional dictionary is likewise classical: the formalization
-states $W_1$ in Kantorovich--Rubinstein dual form, whose equality
-with transport~$W_1$ on compact supports is classical duality
-(lower bounds transfer unconditionally).  The
-boundary between machine-checked and informal is exactly as stated
-here; no other unformalized input is used.
 
 % ══════════════════════════════════════════════════════════════════════
 \begin{thebibliography}{99}
@@ -2169,8 +1890,9 @@ and generalized scale covariance,
 
 \bibitem{DG96}
 B.\ Dubrulle and F.\ Graner,
-Possible statistics of scale invariant systems,
-\textit{J.\ Phys.\ II France}\ \textbf{6} (1996), 797--816.
+Possible statistics of scale invariant systems and the observation of
+intermittency in turbulence,
+\textit{J.\ Phys.\ II France}\ \textbf{6} (1996), 817--824.
 
 \bibitem{Hey63}
 C.\,C.\ Heyde,
@@ -2218,7 +1940,7 @@ Universal scaling laws in fully developed turbulence,
 
 \bibitem{SW95}
 Z.-S.\ She and E.\,C.\ Waymire,
-Quantized energy cascade and log-Poisson statistics in fully
+Quantized energy dissipation and log-Poisson statistics in fully
 developed turbulence,
 \textit{Phys.\ Rev.\ Lett.}\ \textbf{74} (1995), 262--265.
 

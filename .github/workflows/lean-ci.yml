@@ -1,0 +1,45 @@
+name: Lean CI
+
+# The formalization's verification gate, run on every push and PR:
+#   1. lake build           — the kernel checks every proof.
+#   2. AxiomAudit.lean      — every compiled Freeburg.* constant must depend
+#                             only on [propext, Classical.choice, Quot.sound].
+#                             This soundly rules out sorry/admit (sorryAx),
+#                             native_decide, and any custom axiom.
+# Toolchain pinned by formalization/lean-toolchain; Mathlib pinned by
+# formalization/lake-manifest.json.
+
+on:
+  push:
+    paths:
+      - "formalization/**"
+      - ".github/workflows/lean-ci.yml"
+  pull_request:
+    paths:
+      - "formalization/**"
+      - ".github/workflows/lean-ci.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: formalization
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan (toolchain resolved from lean-toolchain)
+        run: |
+          curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Restore Mathlib build cache
+        run: lake exe cache get
+
+      - name: Build (kernel-checks every proof)
+        run: lake build
+
+      - name: Axiom audit (whole library, must PASS)
+        run: lake env lean AxiomAudit.lean

@@ -399,11 +399,11 @@ theorem infDist_geom_plus {β d : ℝ} (A : ℝ) (hβ : β ∈ Set.Ioo (0 : ℝ)
 `W₁(law W_{(d)}, law W₀) ≥ λ_d e^{−λ_d} e^A d`, by the test function
 `f(w) = min(dist(w, G), e^A β(1−β)/2)`.  (Sharpening: the bound holds
 for the log-Poisson target of *every* rate `lam`, not only the paper's
-matched `lam = A/(1−β)`; and the drift-positivity hypothesis is never
-used by the proof — its argument is `_hA` — though the statement still
-carries `0 < A`.) -/
+matched `lam = A/(1−β)` — and for every drift `A`: the drift-positivity
+hypothesis of the printed statement is not needed, so it is no longer
+carried here.) -/
 theorem theorem12_W1_lower {β A d : ℝ}
-    (hβ : β ∈ Set.Ioo (0 : ℝ) 1) (_hA : 0 < A)
+    (hβ : β ∈ Set.Ioo (0 : ℝ) 1)
     (hd : d ∈ Set.Ioc 0 (β * (1 - β) / 2))
     (lam1 lam2 lam : ℝ≥0) :
     ((lam1 : ℝ) + lam2) * Real.exp (-((lam1 : ℝ) + lam2)) * Real.exp A * d
@@ -695,7 +695,7 @@ theorem theorem12_rate_lower {β A r d : ℝ}
                 * Real.exp A * d := by ring
     _ ≤ W1 (twoAtomCPLaw A (β - d) (β + d) lam1 lam2)
           (logPoissonLaw A (Real.log β) lam) :=
-        theorem12_W1_lower ⟨hβ0, hβ1⟩ hA ⟨hd0, hdle⟩ lam1 lam2 lam
+        theorem12_W1_lower ⟨hβ0, hβ1⟩ ⟨hd0, hdle⟩ lam1 lam2 lam
 
 /-! ## Theorem 10's Wasserstein display, genuine-`W₁` form -/
 

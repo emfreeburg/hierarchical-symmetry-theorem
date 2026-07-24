@@ -41,3 +41,10 @@ CLAUDE.md
 __pycache__/
 *.pyc
 .venv/
+
+# Internal program working notes (session files; not part of the release)
+HANDOFF.md
+PROGRAM.md
+V3-PLAN.md
+PHASE5-AMENDED.md
+review/

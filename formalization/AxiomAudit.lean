@@ -14,7 +14,7 @@ In particular a pass rules out `sorryAx` (any `sorry`/`admit`),
 custom axiom, across the whole library at once — strictly stronger than
 running `#print axioms` on each named theorem.
 
-Run from the repository root with:
+Run from this directory (the Lake package root) with:
 
   lake env lean AxiomAudit.lean
 -/

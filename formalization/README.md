@@ -9,17 +9,19 @@ A Lean 4 / Mathlib formalization of the mathematical core of
 `0 × sorry`, `0` custom axioms** — all results depend only on Lean's
 standard axioms `[propext, Classical.choice, Quot.sound]`, enforced
 by `AxiomAudit.lean`: an environment walk checking **every constant
-compiled from the `Freeburg.*` modules** (373, including all
+compiled from the `Freeburg.*` modules** (489, including all
 auto-generated auxiliaries — strictly stronger than per-theorem
 `#print axioms`), failing on any violation.
-Eleven modules, 6,581 lines, 247 declarations.
+Sixteen modules (fourteen mathematical + the `Main.lean` interface
+manifest + the `EdgeCases.lean` boundary-coverage instances),
+8,477 lines, 302 named declarations.
 
 - Toolchain: `leanprover/lean4:v4.30.0-rc2`
 - Mathlib: tag `v4.30.0-rc2` (rev `5450b53e5ddc`)
 - Build: `lake exe cache get && lake build` (a warm Mathlib cache makes
   this take well under a minute for the project files).
 
-**Numbering note.** All eleven modules cite the published arXiv (v2)
+**Numbering note.** The modules cite the published arXiv (v2)
 numbering.
 
 The mapping tables below are curated: they list every paper-relevant
@@ -260,6 +262,66 @@ unconditional and support hypotheses enter only as a.e. bridges.
 | `twoAtomLevy_restrict_band`, `twoAtomCPLaw_eq_cpLawInf` | the Theorem-12 family seen by the Theorem-11 machine: its two-atom Lévy measure lives in `band 0`, and the layered law *equals* `CompoundPoisson.lean`'s `twoAtomCPLaw` (via the cumulant certificate + determinacy) |
 | `theorem11_12_theta` | **the Θ(√ε) capstone**: for the attaining family, `c₁(β,A,r)·√ε(d) ≤ W₁ ≤ (8e^A√(A\|ln r\|)/(1−β))·√ε(d)` — both halves of the paper's closing claim *"the exact rate is Θ(√ε)"*, kernel-checked |
 
+### `Freeburg/Continuous.lean` — the v3 Theorem 17 (both parts) and Theorem 18's five-moment route
+
+Formalizes the **corrected (v3) Theorem 17** ("Four orders do not identify
+the class; five contiguous orders do") at the generator/cumulant level of
+`LevyKhintchine.lean`, `k = 1`.  The engine is the squared-tilt second
+difference `ψ(p+2) − 2ψ(p+1) + ψ(p) = σ² + ∫ e^{px}(e^x−1)² dν` — a square,
+sign-definite on **both** sides of `x = 0`, which is what removes every
+divergence step of the Theorem-7 route.
+
+| Lean name | Paper statement (v3) |
+|---|---|
+| `sqIntegrand`, `sqIntegrand_eq_lk`, `integrable_sqIntegrand` | the squared-tilt integrand `e^{px}(e^x−1)²` = `Δ²` of the LK integrand family |
+| `lkPsi_second_diff` | v3 Thm 17 proof, display (7.1): `Δ²ψ(p) = σ² + r_p` |
+| `eq_smul_dirac_of_ae_const` | the `Icc`-free Dirac endgame (concentration ⟹ Dirac multiple) |
+| `MatchesSLUpTo` | the hypothesis `ζ_q = ζ^SL_q = γq + C(1−β^q)` on a lattice window |
+| `moment_eqs_of_matches` | five-point matching pins `σ² + r_m = C(1−β)²β^m`, `m = 0,1,2` |
+| `rigidity_of_moment_eqs` | the rigidity core: three moment equations ⟹ `σ² = 0 ∧ ν = C·δ_{ln β}` |
+| `theorem17_five_point_rigidity` | **Thm 17(ii)**: exact `ζ^SL` at `q ∈ {0,…,4}` ⟹ the CPC.  No divergence steps, no moments beyond `q = 4`, no sign hypothesis on `C` (nonnegativity is a conclusion) |
+| `theorem18_forward_fiveMoment` | **Thm 18 forward, v3 route B**: A1 (Lemma 1 closed form) + five lattice integrands ⟹ CPC — hypotheses strictly weaker than (S_c) |
+| `psi4_gap_of_matches`, `sq_moment_cauchy_schwarz` | the fourth-order gap `= (σ²+r₂) − A′β²` and `r₁² ≤ r₀r₂` (quadratic-discriminant) |
+| `theorem17_one_sided` | **Thm 17(i), one-sidedness**: four-point matching ⟹ `ζ₄ ≤ ζ^SL₄`, equality **iff** the CPC |
+| `theorem17_one_sided_budget` | the attenuation-only deficit budget `≤ Cβ(1−β)³` (sharpening: needs no `σ² ≥ 0`) |
+| `nu3`, `theorem17_impersonation_three_point`, `nu3_injOn` | **Thm 17(i)** at `(β,C) = (2/3,2)`: the printed three-atom family, exact rationals (`w = 5s/27, 55s/27`; deviation `+77s/2700`), injective in `s` (a genuine continuum), never a Dirac multiple |
+| `nu4`, `theorem17_impersonation_four_point` | **Thm 17(i), maximal window**: two-atom generator matching `ζ^SL` on `{0,1,2,3}` exactly, undershooting at `q = 4` by exactly `34/2025`, not a Dirac multiple |
+
+Conventions and deviations (documented in the module docstring): `k = 1`;
+the (M1)/(M2) probabilistic layer (existence of the scale-invariant measure
+for a triplet; Barral–Mandelbrot identification) remains a classical bridge
+exactly as the LK representation theorem does; "ψ finite on `[0,4k]`" is
+rendered as integrability of the five lattice LK integrands; part (i)'s
+witnesses are at the paper's exhibited parameter values, with the drift
+existentially quantified (any drift matching `ζ₁` works — the compensator
+bookkeeping is absorbed by it, so no numerical `log` bounds are needed).
+
+### `Freeburg/BeyondIID.lean` — §6 in the runbook's scoped forms
+
+| Lean name | Paper statement (v3) |
+|---|---|
+| `theorem13_asymptotic_classification` | **Theorem 13**: under (S), A1 on the lattice increments ⟺ the log-Poisson closed form `ζ_m = Lm + C(1−β^m)` — both directions pure algebra |
+| `theorem14_even_block_moments` | **Theorem 14(i), block level**: the doubled-parameter log-Poisson law — the block law of the interleaved two-slot product, identified in the docstring — has moments `exp(2·Λ_LP(m))` exactly, at every order |
+| `interleavedMarginal`, `logPoissonLaw_mass_top`, `theorem14_marginal_ne_logPoisson` | **Theorem 14(ii)**: the phase-mixture marginal has mass `½(1+e^{−2λ})` at the top atom vs the matched log-Poisson `e^{−λ}` — the law is NOT determined (gap `½(1−e^{−λ})² > 0`; the paper's support/mass-ratio argument extends the mismatch to every log-Poisson law, prose-level) |
+| `corollary15_conditional` | **Corollary 15, conditional form**: given the de Finetti directing kernel with the `n = 1,2` moment identities, variance vanishes at every lattice order and a.e. directing measure IS the log-Poisson law (`theorem3_law_uniqueness_W` pointwise) |
+| `sq_div_four_le_exp`, `theorem16_growth_contradiction`, `theorem16_scoped` | **Theorem 16, growth-contradiction core**: log-Poisson cumulant on ℝ (the PF-analyticity + identity-theorem bridge, as hypothesis) + finite-alphabet linear bound on `(−∞,0]` ⟹ `False` |
+
+Scoped, and documented as such: Theorem 14's full stationary-ergodic
+process realization (sequence space, phase shift, Kolmogorov 0–1) and the
+Gärtner–Ellis remark are the classical layer; de Finetti and
+Perron–Frobenius analyticity enter as hypotheses exactly where the paper
+cites them.
+
+### `Freeburg/Corollaries.lean` — Corollary 19 (§7) and Corollaries 20–23 (§8)
+
+| Lean name | Paper statement (v3) |
+|---|---|
+| `corollary20_conservation` | **Cor 20**: an exact conservation law pins the drift `γ` |
+| `corollary21_unique_curve` | **Cor 21**: with `(C, β)` fixed and conservation imposed, the curve is unique — `β` alone parametrizes (the spectrum and distribution riders follow in prose) |
+| `slCurve_hasDerivAt`, `corollary22_spectrum_width` | **Cor 22**: the slope of the closed form runs from `γ + (C/k)\|ln β\|` at `p = 0` to `γ` at `p → ∞`: width `Δh = (C/k)\|ln β\|`, via a kernel-checked derivative |
+| `corollary23_native_stability` | **Cors 19 + 23** in one statement: `W₁(η/‖η‖, δ_β) ≤ √((1+β)/(C(1−β)))·√ε` — at the `\|ln r\| = 1`, `k = 1` normalization the scale-ratio-free discrete constants and the native continuous constants are literally the same theorem |
+| `corollary23_turbulence` | the She–Lévêque instantiation: `W₁ ≤ √(5/2)·√ε` exactly at `(β,C) = (2/3,2)` |
+
 ## What is *not* formalized (and why)
 
 * The **Lévy–Khintchine representation theorem** (every infinitely
@@ -268,10 +330,22 @@ unconditional and support hypotheses enter only as a.e. bridges.
   how Theorems 7, 10 and 18 state their hypotheses — so every printed
   statement is covered; only this classical bridge is assumed when
   *instantiating* them at an abstract ID law.
-* Sections 6–7 (beyond independence; continuous cascades) — planned
-  future work; de Finetti (Cor 15) and Perron–Frobenius analyticity
-  (Thm 16) are deliberately out of scope (each is a major classical
-  formalization project in its own right).
+* Within §6 (now shipped in scoped form in `BeyondIID.lean`): de Finetti's
+  theorem (Cor 15 takes the directing kernel as hypothesis),
+  Perron–Frobenius simplicity + analytic perturbation and the identity
+  theorem (Thm 16 takes `Λ = Λ_LP` on ℝ as hypothesis), Theorem 14's full
+  stationary-ergodic sequence-space realization and the Gärtner–Ellis
+  large-deviations remark — each a major classical formalization project
+  in its own right.
+* The Bacry–Muzy construction of the exactly scale-invariant measure `M`
+  for a given triplet — `Continuous.lean` states §7's results at the
+  generator (triplet) level, exactly as the printed proofs argue.
+* Minor items riding on the above: Theorem 3(iii), Corollary 4
+  (most-singular-branch geometry), Corollary 8, Proposition 9(b).
+* Scope note on Theorem 17(i)'s "continuum": the injective one-parameter
+  family is kernel-checked on the window `{0,1,2}` (`nu3`, `nu3_injOn`);
+  on the maximal window `{0,1,2,3}` a single witness (`nu4`) is checked —
+  the continuum there is paper-level (moving the atom positions).
 
 ## Findings made while formalizing
 
@@ -300,8 +374,8 @@ unconditional and support hypotheses enter only as a.e. bridges.
    log-Poisson target of *every* rate `λ`: the test function vanishes
    on the whole geometric support `{e^A β^j}`, so only the perturbation
    geometry (`0 < d ≤ β(1−β)/2`) enters — and the drift-positivity
-   hypothesis is never used by the proof (its argument is `_hA`),
-   though the statement still carries `0 < A`.  The
+   hypothesis, unused by the proof, has been dropped from the
+   statement (the original `0 < A` binder `_hA` was removed).  The
    paper's matched target (`λ = A/(1−β)`, `A > 0`) is the special case
    quantified by `theorem12_rate_lower`.
 6. **Sign conventions check out** — the glue theorem
@@ -330,17 +404,43 @@ unconditional and support hypotheses enter only as a.e. bridges.
    cross-pairing atoms and tilts; proving `twoAtomLevy_tilt_eq_etaD`
    forced the matched pairing `(|A|/2)/(1−(β±d))` (the total rate `λ_d`
    is pairing-invariant, so nothing downstream changes).  Fixed in the
-   paper pre-submission — the only error the formalization found.
+   paper pre-submission — the only error the formalization found in the
+   §1–5 material.  (The v2 **Theorem 17** error was found by the
+   paper-side furtherance program, not by formalization; `Continuous.lean`
+   formalizes the corrected v3 statement.)
+10. **The one-sided deficit budget needs no `σ² ≥ 0`** —
+    `theorem17_one_sided_budget` holds for arbitrary `σ²`: the `m = 1`
+    moment equation cancels the Gaussian term, so only the four-point
+    matching and the no-amplifying-jumps hypothesis enter.
+11. **Rigidity forces `C ≥ 0`** — `theorem17_five_point_rigidity` carries
+    no sign hypothesis on the She–Lévêque intensity `C`: nonnegativity
+    falls out of the moment equations (`r₀ ≥ 0`), in the same spirit as
+    finding 2.  The drift is likewise never constrained — matching pins
+    it, it never appears in the rigidity argument.
 
 ## Reproducing the build
 
 ```bash
 # from this directory (formalization/ in the public repository)
 lake exe cache get   # pulls the Mathlib build cache (multi-GB, one-time)
-lake build           # builds the eleven Freeburg modules
+./check.sh           # the full gate: build + whole-library axiom audit + grep
+```
+
+or step by step:
+
+```bash
+lake build           # builds the sixteen Freeburg modules
 lake env lean AxiomAudit.lean   # whole-library axiom audit (must print PASS)
 grep -rn "sorry" Freeburg/ Freeburg.lean   # no matches outside docstring prose
 ```
+
+The toolchain is pinned by `lean-toolchain` and Mathlib by
+`lake-manifest.json`; CI (`.github/workflows/lean-ci.yml` at the repository
+root) runs the build and axiom audit (gates 1–2 of `check.sh`) on
+every push.
+[`Freeburg/Main.lean`](Freeburg/Main.lean) is the **interface manifest**:
+the list of principal machine-checked claims, each held by a compile-time
+anchor, so the manifest cannot silently drift from the library.
 
 ## License
 
